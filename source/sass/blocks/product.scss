@@ -1,21 +1,25 @@
 .product {
   @include paddings(0, 0, 20px, 20px);
+
   &__title {
     color: $black-brown;
+
     @include zeroing();
     font-weight: normal;
     // Для мобильных телефонов
-    @include font-sizes(16px, 20px)
+    @include font-sizes(16px, 20px);
   }
+
   &__description {
     font-family: $font-additional;
     color: $gray-brown;
     // Для мобильных телефонов
-    @include font-sizes(12px, 16px)
+    @include font-sizes(12px, 16px);
   }
+
   &__button {
     // Для мобильных телефонов
-    @include font-sizes(16px, 0px);
+    @include font-sizes(16px, 0);
     @include paddings(20px, 20px);
     margin-top: 13px;
   }

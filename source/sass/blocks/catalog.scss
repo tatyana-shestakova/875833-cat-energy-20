@@ -1,30 +1,38 @@
 .catalog {
   // Для мобильных телефонов
-  border-top: 1px solid #D9D9D9;
+  border-top: 1px solid #d9d9d9;
   padding-top: 27px;
+
   &__main-title {
     @include zeroing();
     padding-bottom: 41px;
   }
+
   &__list {
     list-style: none;
+
     @include zeroing();
   }
+
   &__item {
     // Для мобильных телефонов
     border-top: 1px solid $smoky-white;
     padding-top: 20px;
     padding-bottom: 25px;
   }
+
   &__note {
     border-top: 1px solid $smoky-white;
     border-bottom: 1px solid $smoky-white;
     // Для мобильных телефонов
     @include paddings(26px, 25px);
+
     & span {
       text-transform: uppercase;
+
       @include font-sizes(16px, 20px);
     }
+
     & p {
       font-family: $font-additional;
       // Для мобильных телефонов
@@ -32,6 +40,7 @@
       color: $gray-brown;
     }
   }
+
   &__icon-more {
     // Для мобильных телефонов
     display: block;
@@ -41,12 +50,13 @@
     height: 30px;
     outline: none;
     border-radius: 0;
-    background-image: url(../../img/icon-plus.svg);
+    background-image: url("../../img/icon-plus.svg");
     background-repeat: no-repeat;
     margin-bottom: 23px;
   }
+
   &__show-all {
-    @include font-sizes(16px, 0px);
+    @include font-sizes(16px, 0);
     @include paddings(20px, 20px);
   }
 }

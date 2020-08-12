@@ -1,0 +1,58 @@
+.additional-title {
+  color: $black;
+  text-transform: uppercase;
+  font-weight: normal;
+  // Для мобильных телефонов
+  @include font-sizes(24px, 24px);
+  &--slimm {
+    // Для мобильных телефонов
+    @include font-sizes(24px, 37px);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $yellow-green;
+      right: 207px;
+      top: 24px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 36px;
+      height: 50px;
+      right: 215px;
+      top: 21px;
+      background-image: url(../../img/icon-cat-slim.svg);
+      background-repeat: no-repeat;
+    }
+  }
+  &--weight {
+    // Для мобильных телефонов
+    position: relative;
+    @include font-sizes(24px, 37px);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $yellow-green;
+      right: 207px;
+      top: 24px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 67px;
+      height: 28px;
+      right: 200px;
+      top: 35px;
+      background-image: url(../../img/icon-cat-pro.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+}

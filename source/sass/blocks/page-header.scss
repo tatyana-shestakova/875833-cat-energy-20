@@ -1,0 +1,15 @@
+.page-header {
+  background-color: $white;
+  color: $black;
+  font-family: $font-main;
+  font-weight: 500;
+  text-transform: uppercase;
+  // Для мобильных телефонов
+  @include font-sizes(20px, 20px);
+  @include paddings (11px, 17px, 19px, 19px);
+  &__logo-icon {
+    // Для мобильных телефонов
+    width: 191px;
+    height: 38px;
+  }
+}

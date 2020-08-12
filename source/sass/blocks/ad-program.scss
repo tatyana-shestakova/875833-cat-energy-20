@@ -1,0 +1,12 @@
+.ad-program {
+  @include paddings(0, 7px);
+}
+
+.ad-program__header {
+  // Для мобильных телефонов
+  margin-bottom: 22px;
+}
+
+.ad-program__preview {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,12 @@
+.basic-button {
+  display: block;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $yellow-green;
+  // Для мобильных телефонов
+  @include paddings(7px, 7px);
+  &--more {
+    background-color: $basic-gray;
+    color: $gray-brown;
+  }
+}

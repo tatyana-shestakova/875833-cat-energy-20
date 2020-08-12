@@ -1,0 +1,12 @@
+.site-list__item {
+  // Для мобильных телефонов
+  border-top: 1px solid #E6E6E6;
+}
+
+.site-list__link {
+  display: block;
+  color: $black;
+  // Для мобильных телефонов
+  @include paddings(22px, 24px);
+  outline-color: #E6E6E6;
+}

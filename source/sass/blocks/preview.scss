@@ -1,0 +1,44 @@
+.preview {
+  // Для мобильных телефонов
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: $basic-gray;
+  padding-left: 20px;
+  &__additional-title {
+    @include zeroing();
+    margin-left: 71px;
+    padding-top: 30px;
+  }
+  &__text {
+    @include zeroing();
+    font-family: $font-additional;
+    // Для мобильных телефонов
+    width: 227px;
+    color: $gray-brown;
+    margin-top: 29px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #D9D9D9;
+  }
+
+  &__preview-button {
+    display: block;
+    color: $black;
+    text-transform: uppercase;
+    position: relative;
+    // Для мобильных телефонов
+    padding-top: 19px;
+    padding-bottom: 22px;
+    @include font-sizes(16px, 16px);
+    &::after {
+      position: absolute;
+      content: "";
+      // Для мобильных телефонов
+      width: 24px;
+      height: 12px;
+      background-image: url(../../img/icon-right-arrow-long.svg);
+      background-repeat: no-repeat;
+      right: 135px;
+      bottom: 24px;
+    }
+  }
+}

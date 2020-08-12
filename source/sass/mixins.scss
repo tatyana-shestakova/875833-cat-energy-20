@@ -1,0 +1,23 @@
+@mixin font-sizes($font-size: $basic-font-size, $line-height: $basic-line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin paddings($padding-top: 0, $padding-bottom: 0, $padding-right: 0, $padding-left: 0) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  padding-right: $padding-right;
+  padding-left: $padding-left;
+}
+
+@mixin zeroing($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin elements($width: 0, $height: 0, $content: "", $position: absolute) {
+  content: $content;
+  position: $position;
+  width: $width;
+  height: $height;
+}

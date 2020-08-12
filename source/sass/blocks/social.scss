@@ -18,21 +18,21 @@
     &--vkontakte::after {
       // Для мобильных телефонов
       @include elements(23px, 16px);
-      background-image: url("../../img/icon-vk.svg");
+      background-image: url("../img/icon-vk.svg");
       background-repeat: no-repeat;
     }
 
     &--instagram::after {
       // Для мобильных телефонов
       @include elements(16px, 16px);
-      background-image: url("../../img/icon-insta.svg");
+      background-image: url("../img/icon-insta.svg");
       background-repeat: no-repeat;
     }
 
     &--facebook::after {
       // Для мобильных телефонов
       @include elements(22px, 22px);
-      background-image: url("../../img/icon-fb.svg");
+      background-image: url("../img/icon-fb.svg");
       background-repeat: no-repeat;
     }
   }

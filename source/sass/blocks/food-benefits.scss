@@ -31,7 +31,7 @@
 
     &--nutritious::after {
       @include elements(50px, 50px);
-      background-image: url("../../img/advantage-leaf@1x.png");
+      background-image: url("../img/advantage-leaf@1x.png");
       background-repeat: no-repeat;
       background-size: contain;
       left: 5px;
@@ -47,7 +47,7 @@
 
     &--fast::after {
       @include elements(50px, 50px);
-      background-image: url("../../img/advantage-powder@1x.png");
+      background-image: url("../img/advantage-powder@1x.png");
       background-repeat: no-repeat;
       background-size: contain;
       left: 5px;
@@ -63,7 +63,7 @@
 
     &--profitable::after {
       @include elements(50px, 50px);
-      background-image: url("../../img/advantage-dining@1x.png");
+      background-image: url("../img/advantage-dining@1x.png");
       background-repeat: no-repeat;
       background-size: contain;
       left: 5px;
@@ -79,7 +79,7 @@
 
     &--effective::after {
       @include elements(50px, 50px);
-      background-image: url("../../img/advantage-clock@1x.png");
+      background-image: url("../img/advantage-clock@1x.png");
       background-repeat: no-repeat;
       background-size: contain;
       left: 5px;

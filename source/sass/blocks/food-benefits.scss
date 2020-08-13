@@ -1,0 +1,89 @@
+.food-benefits {
+  // Для мобильных телефонов
+  @include paddings(0, 0, 20px, 20px);
+  padding-bottom: 20px;
+
+  &__main-title {
+    @include zeroing();
+  }
+
+  &__list {
+    list-style: none;
+
+    @include zeroing();
+    margin-top: 38px;
+  }
+
+  &__item {
+    font-family: $font-additional;
+    color: $gray-brown;
+    // Для мобильных телефонов
+    padding-bottom: 22px;
+    padding-left: 80px;
+    position: relative;
+
+    &--nutritious::before {
+      @include elements(60px, 60px);
+      background-color: $yellow-green;
+      left: 0;
+      top: 0;
+    }
+
+    &--nutritious::after {
+      @include elements(50px, 50px);
+      background-image: url("../img/advantage-leaf@1x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 5px;
+      top: 5px;
+    }
+
+    &--fast::before {
+      @include elements(60px, 60px);
+      background-color: $yellow-green;
+      left: 0;
+      top: 0;
+    }
+
+    &--fast::after {
+      @include elements(50px, 50px);
+      background-image: url("../img/advantage-powder@1x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 5px;
+      top: 5px;
+    }
+
+    &--profitable::before {
+      @include elements(60px, 60px);
+      background-color: $yellow-green;
+      left: 0;
+      top: 0;
+    }
+
+    &--profitable::after {
+      @include elements(50px, 50px);
+      background-image: url("../img/advantage-dining@1x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 5px;
+      top: 5px;
+    }
+
+    &--effective::before {
+      @include elements(60px, 60px);
+      background-color: $yellow-green;
+      left: 0;
+      top: 0;
+    }
+
+    &--effective::after {
+      @include elements(50px, 50px);
+      background-image: url("../img/advantage-clock@1x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 5px;
+      top: 5px;
+    }
+  }
+}

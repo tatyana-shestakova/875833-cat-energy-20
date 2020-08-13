@@ -1,0 +1,11 @@
+.main-title {
+  // Для мобильных телефонов
+  @include font-sizes(36px, 36px);
+  font-weight: normal;
+  color: $black;
+
+  &--accented {
+    // Для мобильных телефонов
+    color: $white;
+  }
+}

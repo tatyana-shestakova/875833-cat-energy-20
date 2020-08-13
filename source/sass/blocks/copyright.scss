@@ -1,0 +1,17 @@
+.copyright {
+  // Для мобильных телефонов
+  margin-top: 28px;
+
+  &__link {
+    display: block;
+    font-family: $font-additional;
+    color: $gray-brown;
+
+    @include font-sizes(16px);
+  }
+
+  &__logo {
+    width: 27px;
+    height: 34px;
+  }
+}

@@ -1,0 +1,18 @@
+.selection-program {
+  @include paddings(27px, 32px);
+  border-top: 1px solid #d9d9d9;
+}
+
+.selection-program__main-title {
+  @include zeroing();
+  @include paddings(0, 0, 0, 20px);
+}
+
+.selection-program__text {
+  @include zeroing();
+  color: $black;
+  // Для мобильных телефонов
+  @include paddings(0, 0, 74px, 20px);
+  margin-top: 37px;
+  margin-bottom: 39px;
+}

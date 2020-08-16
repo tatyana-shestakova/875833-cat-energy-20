@@ -2,11 +2,11 @@
   background-color: $basic-gray;
   // Для мобильных телефонов
   @include paddings(39px, 32px, 20px, 19px);
+}
 
-  &__logo-text {
-    display: block;
-    width: 128px;
-    height: 24px;
-    margin-bottom: 32px;
-  }
+.page-footer__logo-text {
+  display: block;
+  width: 128px;
+  height: 24px;
+  margin-bottom: 32px;
 }

@@ -1,0 +1,35 @@
+.additional-products {
+  @include paddings(28px, 35px);
+}
+
+.additional-products__additional-title {
+  @include zeroing();
+  position: relative;
+  // Для мобильных телефонов
+  padding-left: 19px;
+  margin-bottom: 35px;
+}
+
+.additional-products__list {
+  @include zeroing();
+  list-style: none;
+  // Для мобильных телефонов
+  @include paddings(0, 0, 20px, 20px);
+}
+
+.additional-products__item {
+  // Для мобильных телефонов
+
+  @include paddings(13px, 18px);
+  border-top: 1px solid $light-telegray;
+
+  &:last-child {
+    border-bottom: 1px solid $light-telegray;
+  }
+}
+
+.additional-products__offer {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 39px;
+}

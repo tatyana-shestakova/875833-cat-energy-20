@@ -1,0 +1,8 @@
+.slider__list {
+  @include zeroing();
+  list-style: none;
+}
+
+.slider__toggle {
+  margin-top: 27px;
+}

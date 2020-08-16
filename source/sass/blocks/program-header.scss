@@ -7,22 +7,22 @@
   color: $white;
 
   @include paddings (0, 0, 20px, 20px);
+}
 
-  &__main-title {
-    // Для мобильных телефонов
-    @include zeroing();
-    padding-top: 23px;
-  }
+.program-header__main-title {
+  // Для мобильных телефонов
+  @include zeroing();
+  padding-top: 23px;
+}
 
-  &__text {
-    // Для мобильных телефонов
-    @include zeroing();
-    margin-top: 29px;
-    text-transform: uppercase;
-  }
+.program-header__text {
+  // Для мобильных телефонов
+  @include zeroing();
+  margin-top: 29px;
+  text-transform: uppercase;
+}
 
-  &__button {
-    // Для мобильных телефонов
-    margin-top: 302px;
-  }
+.program-header__button {
+  // Для мобильных телефонов
+  margin-top: 302px;
 }

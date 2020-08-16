@@ -2,61 +2,61 @@
   // Для мобильных телефонов
   border-top: 1px solid #d9d9d9;
   padding-top: 27px;
+}
 
-  &__main-title {
-    @include zeroing();
-    padding-bottom: 41px;
-  }
+.catalog__main-title {
+  @include zeroing();
+  padding-bottom: 41px;
+}
 
-  &__list {
-    list-style: none;
+.catalog__list {
+  list-style: none;
 
-    @include zeroing();
-  }
+  @include zeroing();
+}
 
-  &__item {
-    // Для мобильных телефонов
-    border-top: 1px solid $smoky-white;
-    padding-top: 20px;
-    padding-bottom: 25px;
-  }
+.catalog__item {
+  // Для мобильных телефонов
+  border-top: 1px solid $smoky-white;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
 
-  &__note {
-    border-top: 1px solid $smoky-white;
-    border-bottom: 1px solid $smoky-white;
-    // Для мобильных телефонов
-    @include paddings(26px, 25px);
+.catalog__note {
+  border-top: 1px solid $smoky-white;
+  border-bottom: 1px solid $smoky-white;
+  // Для мобильных телефонов
+  @include paddings(26px, 25px, 20px, 21px);
+}
 
-    & span {
-      text-transform: uppercase;
+.catalog span {
+  text-transform: uppercase;
 
-      @include font-sizes(16px, 20px);
-    }
+  @include font-sizes(16px, 20px);
+}
 
-    & p {
-      font-family: $font-additional;
-      // Для мобильных телефонов
-      @include font-sizes(12px, 16px);
-      color: $gray-brown;
-    }
-  }
+.catalog p {
+  font-family: $font-additional;
+  // Для мобильных телефонов
+  @include font-sizes(12px, 16px);
+  color: $gray-brown;
+}
 
-  &__icon-more {
-    // Для мобильных телефонов
-    display: block;
-    background-color: $white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    outline: none;
-    border-radius: 0;
-    background-image: url("../img/icon-plus.svg");
-    background-repeat: no-repeat;
-    margin-bottom: 23px;
-  }
+.catalog__icon-more {
+  // Для мобильных телефонов
+  display: block;
+  background-color: $white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border-radius: 0;
+  background-image: url("../img/icon-plus.svg");
+  background-repeat: no-repeat;
+  margin-bottom: 23px;
+}
 
-  &__show-all {
-    @include font-sizes(16px, 0);
-    @include paddings(20px, 20px);
-  }
+.catalog__show-all {
+  @include font-sizes(16px, 0);
+  @include paddings(20px, 20px);
 }

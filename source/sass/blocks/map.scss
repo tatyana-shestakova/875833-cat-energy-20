@@ -1,0 +1,28 @@
+.map {
+  &--accented {
+    background-color: $basic-gray;
+  }
+}
+
+.map__wrap {
+  // Для мобильных телефонов
+  @include paddings(28px, 22px, 19px, 19px);
+}
+
+.map__subtitle {
+  @include zeroing();
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #111111;
+
+  // Для мобильных телефонов
+  @include font-sizes(16px, 18px);
+}
+
+.map__address {
+  font-family: $font-additional;
+  color: $gray-brown;
+
+  // Для мобильных телефонов
+  @include font-sizes(14px, 20px);
+}

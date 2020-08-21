@@ -1,26 +1,14 @@
 .preview {
-  // Для мобильных телефонов
-  margin-right: 20px;
-  margin-left: 20px;
   background-color: $basic-gray;
-  padding-left: 20px;
 }
 
 .preview__additional-title {
   @include zeroing();
-  margin-left: 71px;
-  padding-top: 30px;
 }
 
 .preview__text {
   @include zeroing();
   font-family: $font-additional;
-  // Для мобильных телефонов
-  width: 227px;
-  color: $gray-brown;
-  margin-top: 29px;
-  padding-bottom: 23px;
-  border-bottom: 1px solid #d9d9d9;
 }
 
 .preview__preview-button {
@@ -28,21 +16,100 @@
   color: $black;
   text-transform: uppercase;
   position: relative;
-  // Для мобильных телефонов
-  padding-top: 19px;
-  padding-bottom: 22px;
+}
 
-  @include font-sizes(16px, 16px);
+@media (max-width: $mobile-width-only) {
+  .preview {
+    @include paddings(0, 0, 20px, 20px);
+    width: 240px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
-  &::after {
-    position: absolute;
-    content: "";
-    // Для мобильных телефонов
-    width: 24px;
-    height: 12px;
-    background-image: url("../img/icon-right-arrow-long.svg");
-    background-repeat: no-repeat;
-    right: 135px;
-    bottom: 24px;
+  .preview__additional-title {
+    margin-left: 71px;
+    padding-top: 30px;
+  }
+
+  .preview__text {
+    color: $gray-brown;
+    margin-top: 29px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .preview__preview-button {
+    padding-top: 19px;
+    padding-bottom: 22px;
+
+    @include font-sizes(16px, 16px);
+
+    &::after {
+      @include elements(24px, 12px);
+      background-image: url("../img/icon-right-arrow-long.svg");
+      background-repeat: no-repeat;
+      right: 120px;
+      bottom: 24px;
+    }
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .preview {
+    width: 708px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .preview__additional-title {
+    text-transform: uppercase;
+    margin-left: 53px;
+    margin-top: 77px;
+  }
+
+  .preview__text {
+    @include font-sizes(16px, 24px);
+    margin-left: 52px;
+    margin-top: 24px;
+    width: 377px;
+  }
+
+  .preview__preview-button {
+    margin-left: 52px;
+    margin-top: 52px;
+
+    @include font-sizes(20px, 30px);
+
+    &::after {
+      @include elements(32px, 10px);
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      background-repeat: no-repeat;
+      bottom: 10px;
+      left: 130px;
+    }
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .preview {
+    width: 570px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .preview__additional-title {
+    text-transform: uppercase;
+    margin-top: 77px;
+  }
+
+  .preview__text {
+    @include font-sizes(16px, 24px);
+    margin-left: 52px;
+    margin-top: 73px;
+    width: 467px;
   }
 }

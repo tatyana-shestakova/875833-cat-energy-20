@@ -1,23 +1,14 @@
 .ad-example {
-  // Для мобильных телефонов
   background-color: $dark-smoky-white;
-
-  @include paddings(27px, 25px, 21px, 20px);
 }
 
 .ad-example__main-title {
   @include zeroing();
-  line-height: 40px;
-  // Для мобильных телефонов
-  margin-bottom: 33px;
 }
 
 .ad-example__lead {
   @include zeroing();
   color: $gray-brown;
-
-  // Для мобильных телефонов
-  @include font-sizes();
   font-family: $font-additional;
 }
 
@@ -31,24 +22,57 @@
   @include zeroing();
   font-family: $font-main;
   text-transform: uppercase;
-
-  // Для мобильных телефонов
-  @include font-sizes(24px, 24px);
 }
 
 .ad-example__description {
   @include zeroing();
   font-family: $font-additional;
   color: $gray-brown;
-
-  // Для мобильных телефонов
-  @include font-sizes(12px, 12px);
 }
 
 .ad-example__cost {
   text-transform: uppercase;
+}
 
-  // Для мобильных телефонов
-  @include font-sizes(14px, 20px);
-  margin-bottom: 42px;
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .ad-example {
+    background-color: $dark-smoky-white;
+
+    @include paddings(27px, 25px, 21px, 20px);
+  }
+
+  .ad-example__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ad-example__main-title {
+    margin-bottom: 33px;
+  }
+
+  .ad-example__lead {
+    @include font-sizes();
+    font-family: $font-additional;
+  }
+
+  .ad-example__result {
+    @include zeroing();
+    margin-top: 25px;
+    margin-bottom: 26px;
+  }
+
+  .ad-example__figures {
+    @include font-sizes(24px, 24px);
+  }
+
+  .ad-example__description {
+    @include font-sizes(12px, 12px);
+  }
+
+  .ad-example__cost {
+    @include font-sizes(14px, 20px);
+    margin-bottom: 42px;
+  }
 }

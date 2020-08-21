@@ -1,11 +1,22 @@
 .main-title {
-  // Для мобильных телефонов
-  @include font-sizes(36px, 36px);
   font-weight: normal;
   color: $black;
+}
 
-  &--accented {
-    // Для мобильных телефонов
-    color: $white;
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .main-title {
+    @include font-sizes(36px, 36px);
+
+    &--accented {
+      color: $white;
+    }
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .main-title {
+    @include font-sizes(60px, 60px);
   }
 }

@@ -1,8 +1,3 @@
-.copyright {
-  // Для мобильных телефонов
-  margin-top: 28px;
-}
-
 .copyright__link {
   display: block;
   font-family: $font-additional;
@@ -14,4 +9,32 @@
 .copyright__logo {
   width: 27px;
   height: 34px;
+}
+
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+    width: 281px;
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 163px;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 129px;
+  }
 }

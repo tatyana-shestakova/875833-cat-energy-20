@@ -1,12 +1,34 @@
 .ad-program {
-  @include paddings(0, 7px);
+  display: grid;
 }
 
-.ad-program__header {
-  // Для мобильных телефонов
-  margin-bottom: 22px;
+
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .ad-program {
+
+    grid-template-rows: 480px 266px 266px;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
 }
 
-.ad-program__preview {
-  margin-bottom: 20px;
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .ad-program {
+    margin-top: 62px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 810px 372px 372px;
+    column-gap: 80px;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .ad-program {
+    margin-top: 0;
+    padding-top: 111px;
+    grid-template-columns: 570px 570px;
+    grid-template-rows: 585px 374px;
+  }
 }

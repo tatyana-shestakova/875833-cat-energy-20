@@ -1,28 +1,99 @@
 .program-header {
   background-color: $white;
   background-repeat: no-repeat;
-  // Для мобильных телефонов
-  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
-  background-position: 0% 80%, 0% 0%;
-  color: $white;
-
-  @include paddings (0, 0, 20px, 20px);
+  display: flex;
 }
 
 .program-header__main-title {
-  // Для мобильных телефонов
   @include zeroing();
-  padding-top: 23px;
 }
 
 .program-header__text {
-  // Для мобильных телефонов
   @include zeroing();
-  margin-top: 29px;
-  text-transform: uppercase;
 }
 
-.program-header__button {
-  // Для мобильных телефонов
-  margin-top: 302px;
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .program-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
+    background-position: 0% 80%, 0% 0%;
+    color: $white;
+
+    @include paddings (0, 0, 20px, 20px);
+  }
+
+  .program-header__main-title {
+    @include zeroing();
+    padding-top: 23px;
+  }
+
+  .program-header__text {
+    @include zeroing();
+    margin-top: 29px;
+    text-transform: uppercase;
+  }
+
+  .program-header__button {
+    align-self: stretch;
+    margin-top: 302px;
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .program-header {
+    flex-direction: column;
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-position: 100% 100%;
+  }
+
+  .program-header__main-title {
+    margin-left: 87px;
+    margin-bottom: 41px;
+  }
+
+  .program-header__text {
+    margin-left: 88px;
+
+    @include font-sizes(20px, 20px);
+    text-transform: uppercase;
+  }
+
+  .program-header__button {
+    margin-left: 82px;
+    margin-top: 49px;
+    width: 244px;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .program-header {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-position: 80% 50%;
+    margin-bottom: 82px;
+  }
+
+  .program-header__main-title {
+    margin-left: 80px;
+    margin-bottom: 40px;
+  }
+
+  .program-header__text {
+    margin-left: 80px;
+
+    @include font-sizes(20px, 20px);
+    text-transform: uppercase;
+  }
+
+  .program-header__button {
+    margin-left: 80px;
+    margin-top: 52px;
+    width: 244px;
+  }
 }

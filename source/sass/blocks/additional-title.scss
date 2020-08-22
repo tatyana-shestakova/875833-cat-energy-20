@@ -1,53 +1,72 @@
 .additional-title {
   color: $black;
   font-weight: normal;
-  // Для мобильных телефонов
-  @include font-sizes(24px, 24px);
+}
 
-  &--slimm {
-    text-transform: uppercase;
-    // Для мобильных телефонов
-    @include font-sizes(24px, 37px);
-    position: relative;
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .additional-title {
+    @include font-sizes(24px, 24px);
 
-    &::before {
-      @include elements(50px, 50px);
-      border-radius: 50%;
-      background-color: $yellow-green;
-      right: 207px;
-      top: 24px;
+    &--slimm {
+      text-transform: uppercase;
+
+      @include font-sizes(24px, 37px);
+      position: relative;
+
+      &::before {
+        @include elements(50px, 50px);
+        border-radius: 50%;
+        background-color: $yellow-green;
+        right: 207px;
+        top: 24px;
+      }
+
+      &::after {
+        @include elements(36px, 50px);
+        right: 215px;
+        top: 21px;
+        background-image: url("../img/icon-cat-slim.svg");
+        background-repeat: no-repeat;
+      }
     }
 
-    &::after {
-      @include elements(36px, 50px);
-      right: 215px;
-      top: 21px;
-      background-image: url("../img/icon-cat-slim.svg");
-      background-repeat: no-repeat;
+    &--weight {
+      text-transform: uppercase;
+      position: relative;
+
+      @include font-sizes(24px, 37px);
+
+      &::before {
+        @include elements(50px, 50px);
+        border-radius: 50%;
+        background-color: $yellow-green;
+        right: 207px;
+        top: 24px;
+      }
+
+      &::after {
+        @include elements(67px, 28px);
+        right: 200px;
+        top: 35px;
+        background-image: url("../img/icon-cat-pro.svg");
+        background-repeat: no-repeat;
+      }
     }
   }
+}
 
-  &--weight {
-    text-transform: uppercase;
-    // Для мобильных телефонов
-    position: relative;
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .additional-title {
+    @include font-sizes(36px, 36px);
+  }
+}
 
-    @include font-sizes(24px, 37px);
-
-    &::before {
-      @include elements(50px, 50px);
-      border-radius: 50%;
-      background-color: $yellow-green;
-      right: 207px;
-      top: 24px;
-    }
-
-    &::after {
-      @include elements(67px, 28px);
-      right: 200px;
-      top: 35px;
-      background-image: url("../img/icon-cat-pro.svg");
-      background-repeat: no-repeat;
-    }
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .additional-title {
+    @include font-sizes(36px, 36px);
+    align-self: center;
   }
 }

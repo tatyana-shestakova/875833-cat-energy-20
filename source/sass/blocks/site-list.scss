@@ -1,12 +1,43 @@
-.site-list__item {
-  // Для мобильных телефонов
-  border-top: 1px solid #e6e6e6;
+
+.site-list {
+  display: flex;
 }
 
 .site-list__link {
   display: block;
   color: $black;
-  // Для мобильных телефонов
-  @include paddings(22px, 24px);
-  outline-color: #e6e6e6;
+}
+
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .site-list {
+    flex-direction: column;
+  }
+
+  .site-list__item {
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: center;
+  }
+
+  .site-list__link {
+    @include paddings(22px, 24px);
+    outline-color: #e6e6e6;
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .site-list {
+    width: 440px;
+    justify-content: space-between;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .site-list {
+    width: 478px;
+    justify-content: space-between;
+  }
 }

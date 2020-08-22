@@ -1,12 +1,51 @@
 .page-footer {
   background-color: $basic-gray;
-  // Для мобильных телефонов
-  @include paddings(39px, 32px, 20px, 19px);
+}
+
+.page-footer__wrap {
+  display: flex;
 }
 
 .page-footer__logo-text {
   display: block;
-  width: 128px;
-  height: 24px;
-  margin-bottom: 32px;
+}
+
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .page-footer {
+    @include paddings(39px, 32px, 20px, 19px);
+  }
+
+  .page-footer__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-footer__logo-text {
+    width: 128px;
+    height: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .page-footer {
+    @include paddings(55px, 61px, 0, 0);
+  }
+
+  .page-footer__wrap {
+    justify-content: space-between;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .page-footer {
+    @include paddings(55px, 61px, 0, 0);
+  }
+
+  .page-footer__wrap {
+    justify-content: space-between;
+  }
 }

@@ -1,14 +1,28 @@
 .basic-button {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
   text-transform: uppercase;
   color: $white;
   background-color: $yellow-green;
-  // Для мобильных телефонов
-
-  @include paddings(7px, 7px);
 
   &--more {
     background-color: $basic-gray;
     color: $gray-brown;
+  }
+}
+
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .basic-button {
+    @include paddings(7px, 7px);
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .basic-button {
+    @include paddings(9px, 9px);
+    @include font-sizes(16px, 20px);
   }
 }

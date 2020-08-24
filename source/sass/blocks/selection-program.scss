@@ -1,18 +1,42 @@
-.selection-program {
-  @include paddings(27px, 32px);
-  border-top: 1px solid #d9d9d9;
-}
-
 .selection-program__main-title {
   @include zeroing();
-  @include paddings(0, 0, 0, 20px);
 }
 
 .selection-program__text {
   @include zeroing();
   color: $black;
-  // Для мобильных телефонов
-  @include paddings(0, 0, 74px, 20px);
-  margin-top: 37px;
-  margin-bottom: 39px;
+  text-transform: uppercase;
+}
+
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .selection-program {
+    @include paddings(27px, 32px);
+    border-top: 1px solid #d9d9d9;
+  }
+
+  .selection-program__main-title {
+    @include paddings(0, 0, 0, 20px);
+  }
+
+  .selection-program__text {
+    @include paddings(0, 0, 74px, 20px);
+    margin-top: 37px;
+    margin-bottom: 39px;
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .selection-program__main-title {
+    @include zeroing();
+    margin-top: 65px;
+    margin-bottom: 54px;
+  }
+
+  .selection-program__text {
+    @include font-sizes(20px, 30px);
+    width: 323px;
+    margin-bottom: 66px;
+  }
 }

@@ -1,5 +1,5 @@
 .ad-example {
-  background-color: $dark-smoky-white;
+  background-color: $white;
 }
 
 .ad-example__main-title {
@@ -14,8 +14,6 @@
 
 .ad-example__result {
   @include zeroing();
-  margin-top: 25px;
-  margin-bottom: 26px;
 }
 
 .ad-example__figures {
@@ -40,6 +38,10 @@
     background-color: $dark-smoky-white;
 
     @include paddings(27px, 25px, 21px, 20px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .ad-example__wrap {
@@ -50,17 +52,25 @@
 
   .ad-example__main-title {
     margin-bottom: 33px;
+    align-self: flex-start;
   }
 
   .ad-example__lead {
     @include font-sizes();
-    font-family: $font-additional;
   }
 
   .ad-example__result {
-    @include zeroing();
     margin-top: 25px;
     margin-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ad-example__item {
+    width: 124px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .ad-example__figures {
@@ -69,10 +79,143 @@
 
   .ad-example__description {
     @include font-sizes(12px, 12px);
+    width: 77px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
   }
 
   .ad-example__cost {
     @include font-sizes(14px, 20px);
     margin-bottom: 42px;
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .ad-example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ad-example__main-title {
+    margin-bottom: 63px;
+    align-self: flex-start;
+  }
+
+  .ad-example__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ad-example__lead {
+    @include font-sizes(16px, 24px);
+  }
+
+  .ad-example__result-wrap {
+    margin-top: 54px;
+    margin-bottom: 59px;
+    width: 707px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ad-example__result {
+    display: flex;
+    justify-content: space-between;
+    width: 366px;
+  }
+
+  .ad-example__item {
+    width: 162px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ad-example__figures {
+    @include font-sizes(30px, 37px);
+  }
+
+  .ad-example__description {
+    @include font-sizes(14px, 14px);
+    width: 77px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .ad-example__cost {
+    width: 174px;
+
+    @include font-sizes(20px, 20px);
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .ad-example {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .ad-example__wrap {
+    display: flex;
+    flex-direction: column;
+    width: 436px;
+    align-items: flex-start;
+  }
+
+  .ad-example__slider {
+    width: 690px;
+  }
+
+  .ad-example__main-title {
+    margin-bottom: 146px;
+  }
+
+  .ad-example__result-wrap {
+    width: 366px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 69px;
+    margin-bottom: 0;
+  }
+
+  .ad-example__lead {
+    @include font-sizes(16px, 24px);
+  }
+
+  .ad-example__result {
+    margin-bottom: 55px;
+  }
+
+  .ad-example__figures {
+    @include font-sizes(30px, 37px);
+  }
+
+  .ad-example__description {
+    @include font-sizes(14px, 14px);
+    width: 77px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .ad-example__cost {
+    width: 327px;
+
+    @include font-sizes(20px, 20px);
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
   }
 }

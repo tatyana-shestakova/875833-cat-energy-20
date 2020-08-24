@@ -1,19 +1,93 @@
-.best-offer {
-  // Для мобильных телефонов
-  width: 280px;
-  height: 289px;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-color: $yellow-green;
-}
 
 .best-offer__link {
-  display: block;
+  display: flex;
 
   @include font-sizes(16px, 20px);
   font-family: $font-additional;
   color: $white;
 }
 
+.best-offer__link span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .best-offer_picture {
   fill: $white;
+}
+
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .best-offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 289px;
+    background-image: url("../img/gift-photo-mobile@1x.jpg");
+    background-color: $yellow-green;
+  }
+
+  .best-offer__link {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 161px;
+    height: 188px;
+  }
+
+  .best-offer__link span {
+    text-align: center;
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .best-offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 708px;
+    height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-color: $yellow-green;
+  }
+
+  .best-offer__link {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 506px;
+  }
+
+  .best-offer__link span {
+    width: 161px;
+    text-align: left;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .best-offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 245px;
+    height: 289px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-color: $yellow-green;
+  }
+
+  .best-offer__link {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 161px;
+    height: 190px;
+  }
+
+  .best-offer__link span {
+    width: auto;
+    text-align: center;
+  }
 }

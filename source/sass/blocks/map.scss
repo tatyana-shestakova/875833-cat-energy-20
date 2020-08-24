@@ -5,8 +5,7 @@
 }
 
 .map__wrap {
-  // Для мобильных телефонов
-  @include paddings(28px, 22px, 19px, 19px);
+  display: flex;
 }
 
 .map__subtitle {
@@ -14,15 +13,81 @@
   text-transform: uppercase;
   font-weight: normal;
   color: #111111;
-
-  // Для мобильных телефонов
-  @include font-sizes(16px, 18px);
 }
 
 .map__address {
   font-family: $font-additional;
   color: $gray-brown;
+  display: block;
+}
 
-  // Для мобильных телефонов
-  @include font-sizes(14px, 20px);
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .map__wrap {
+    justify-content: space-between;
+
+    @include paddings(28px, 22px, 19px, 19px);
+  }
+
+  .map__subtitle {
+    @include font-sizes(16px, 18px);
+  }
+
+  .map__address {
+    @include font-sizes(14px, 20px);
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map__wrap {
+    justify-content: space-between;
+    align-items: center;
+    height: 201px;
+    width: 625px;
+  }
+
+  .map__subtitle {
+    @include font-sizes(20px, 21px);
+    width: 171px;
+  }
+
+  .map__address {
+    @include font-sizes(16px, 20px);
+    width: 159px;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .map {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .map__wrap {
+    justify-content: space-between;
+    align-items: center;
+    width: 405px;
+    height: 201px;
+
+    @include paddings(0, 0, 89px, 76px);
+  }
+
+  .map__subtitle {
+    @include font-sizes(20px, 21px);
+    width: 163px;
+  }
+
+  .map__address {
+    @include font-sizes(16px, 20px);
+    width: 155px;
+  }
 }

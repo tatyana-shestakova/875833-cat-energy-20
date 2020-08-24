@@ -2,29 +2,87 @@
   display: block;
   color: $black-brown;
   text-transform: uppercase;
-  // Для мобильных телефонов
 }
 
 .product-may-like__title {
   @include zeroing();
   font-weight: normal;
-  // Для мобильных телефонов
-  @include font-sizes(16px, 16px);
-}
-
-.product-may-like__description {
-  margin-top: 13px;
-  margin-bottom: 15px;
 }
 
 .product-may-like__description-table {
+  @include font-sizes(14px, 14px);
   font-family: $font-additional;
   color: $gray-brown;
-  // Для мобильных телефонов
-  @include font-sizes(14px, 14px);
+  border: none;
+  border-spacing: 0;
 }
 
 .product-may-like__button {
   @include font-sizes(16px, 0);
   @include paddings(20px, 20px);
+}
+
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .product-may-like {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-may-like__title {
+    @include font-sizes(16px, 16px);
+  }
+
+  .product-may-like__description {
+    margin-top: 13px;
+    margin-bottom: 15px;
+  }
+
+  .product-may-like__description-table {
+    @include font-sizes(14px, 14px);
+    width: 280px;
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .product-may-like {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product-may-like__title {
+    @include font-sizes(20px, 20px);
+  }
+
+  .product-may-like__description-table {
+    @include font-sizes(16px, 20px);
+    width: 226px;
+  }
+
+  .product-may-like__button {
+    width: 632px;
+    margin-top: 23px;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .product-may-like {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product-may-like__description-table {
+    width: 287px;
+  }
+
+  .product-may-like__button {
+    width: 244px;
+    margin-top: 0;
+  }
 }

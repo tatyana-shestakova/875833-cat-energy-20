@@ -1,32 +1,6 @@
 .form__more-details {
   color: $gray-brown;
   text-transform: uppercase;
-
-  // Для мобильных телефонов
-  @include font-sizes(16px, 18px);
-
-  &--about-pet {
-    @include paddings(0, 27px, 20px, 19px);
-    border-bottom: 1px solid #d9d9d9;
-  }
-
-  &--radio-selection {
-    @include paddings(20px, 22px, 20px, 19px);
-    border-bottom: 1px solid #d9d9d9;
-    color: $black-brown;
-  }
-
-  &--about-owner {
-    @include paddings(26px, 0, 20px, 19px);
-  }
-
-  &--comment {
-    @include paddings(27px, 0, 20px, 19px);
-  }
-
-  &--checkbox-selection {
-    @include paddings(27px, 34px, 20px, 19px);
-  }
 }
 
 .form__input {
@@ -39,52 +13,268 @@
 }
 
 .form__input input {
-  // Для мобильных телефонов
   @include paddings(12px, 12px);
 }
 
 .form__list {
   @include zeroing();
   list-style-type: none;
-  padding-left: 1px;
-}
-
-.form__item {
-  padding-bottom: 19px;
-
-  &:last-child {
-    padding-bottom: 0;
-  }
 }
 
 .form__additional-title {
   @include zeroing();
   text-transform: none;
-  padding-bottom: 34px;
 }
 
 .form__textarea {
   @include zeroing();
-  padding-left: 1px;
 }
 
 .form__textarea textarea {
   text-transform: uppercase;
-}
-
-.form__button-wrap {
-  @include paddings(0, 0, 20px, 20px);
+  color: $gray-brown;
 }
 
 .form__button {
-  @include paddings(12px, 12px);
   border: 0;
   outline: none;
-  width: 100%;
 }
 
 .form__text {
   font-family: $font-additional;
+}
 
-  @include font-sizes(14px, 16px);
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__more-details {
+    @include font-sizes(16px, 18px);
+
+    &--about-pet {
+      @include paddings(0, 27px, 20px, 19px);
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    &--radio-selection {
+      @include paddings(20px, 22px, 20px, 19px);
+      border-bottom: 1px solid #d9d9d9;
+      color: $black-brown;
+    }
+
+    &--about-owner {
+      @include paddings(26px, 0, 20px, 19px);
+    }
+
+    &--comment {
+      @include paddings(27px, 0, 20px, 19px);
+    }
+
+    &--checkbox-selection {
+      @include paddings(27px, 34px, 20px, 19px);
+    }
+  }
+
+  .form__input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form__input input {
+    @include paddings(12px, 12px);
+    flex-grow: 1;
+  }
+
+  .form__input label {
+    margin-right: 9px;
+  }
+
+  .form__list {
+    padding-left: 1px;
+  }
+
+  .form__item {
+    padding-bottom: 19px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .form__item label {
+    margin-left: 16px;
+  }
+
+  .form__additional-title {
+    padding-bottom: 34px;
+  }
+
+  .form__textarea {
+    padding-left: 1px;
+  }
+
+  .form__textarea textarea {
+    width: 280px;
+    height: 150px;
+  }
+
+  .form__button-wrap {
+    @include paddings(0, 0, 20px, 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form__button {
+    @include paddings(12px, 12px);
+    width: 280px;
+  }
+
+  .form__text {
+    @include font-sizes(14px, 16px);
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 72px;
+
+    &:not(.main-title):not(.additional-title) {
+      @include font-sizes(20px, 30px);
+    }
+  }
+
+  .form__more-details {
+    margin-bottom: 65px;
+  }
+
+  .form__additional-title {
+    margin-bottom: 76px;
+  }
+
+  .form__list {
+    &--checkbox-selection {
+      display: grid;
+      grid-template-columns: 221px 221px;
+      grid-template-rows: auto;
+      row-gap: 32px;
+      column-gap: 123px;
+    }
+  }
+
+  .form__input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include zeroing();
+  }
+
+  .form__input input {
+    flex-grow: 1;
+  }
+
+  .form__input label {
+    margin-right: 13px;
+  }
+
+  .form__textarea textarea {
+    width: 631px;
+    height: 174px;
+  }
+
+  .form__button-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 523px;
+    justify-content: space-between;
+  }
+
+  .form__button {
+    @include paddings(12px, 12px);
+    width: 282px;
+  }
+
+  .form__text {
+    @include font-sizes(16px, 16px);
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 569px 568px;
+    grid-template-rows: auto;
+    column-gap: 80px;
+  }
+
+  .form__more-details {
+    &--about-owner {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      display: grid;
+      grid-template-columns: 569px 572px;
+      grid-template-rows: auto;
+      column-gap: 78px;
+    }
+
+    &--comment {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      display: grid;
+      grid-template-columns: 1220px;
+      grid-template-rows: auto;
+    }
+
+    &--checkbox-selection {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
+
+  .form__list {
+    &--checkbox-selection {
+      display: grid;
+      grid-template-columns: 221px 221px 221px 221px;
+      grid-template-rows: 40px;
+      column-gap: 104px;
+    }
+  }
+
+  .form__textarea {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  .form__textarea textarea {
+    width: 1220px;
+    height: 174px;
+  }
+
+  .form__additional-title {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  .form__input {
+    @include zeroing();
+  }
+
+  .form__button-wrap {
+    width: 829px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__button {
+    width: 568px;
+  }
 }

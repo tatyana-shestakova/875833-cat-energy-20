@@ -6,29 +6,49 @@
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
   .ad-program {
-
     grid-template-rows: 480px 266px 266px;
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    row-gap: 21px;
+  }
+
+  .ad-program__preview {
+    &:first-of-type {
+      margin-top: 1px;
+    }
   }
 }
 
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .ad-program {
-    margin-top: 62px;
+    @include zeroing();
+    margin-top: 54px;
     grid-template-columns: 1fr;
-    grid-template-rows: 810px 372px 372px;
-    column-gap: 80px;
+    grid-template-rows: 810px auto;
+  }
+
+  .ad-program__header {
+    @include paddings(0, 0, 30px, 29px);
+  }
+
+  .ad-program__preview {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
   }
 }
 
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .ad-program {
-    margin-top: 0;
-    padding-top: 111px;
+    @include paddings(0, 0, 110px, 110px);
+    margin-top: 76px;
     grid-template-columns: 570px 570px;
-    grid-template-rows: 585px 374px;
+    grid-template-rows: auto;
+    column-gap: 80px;
+  }
+
+  .ad-program__preview {
+    @include zeroing();
   }
 }

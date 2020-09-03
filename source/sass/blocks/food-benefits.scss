@@ -23,15 +23,14 @@
   }
 
   .food-benefits__list {
-    margin-top: 38px;
+    margin-top: 40px;
     grid-template-columns: 279px;
     grid-template-rows: 60px 60px 60px 60px;
     row-gap: 20px;
   }
 
   .food-benefits__item {
-    padding-bottom: 22px;
-    padding-left: 80px;
+    @include paddings(3px, 22px, 0, 80px);
 
     &--nutritious::before {
       @include elements(60px, 60px);
@@ -99,29 +98,121 @@
   }
 
   .food-benefits__main-title {
-    margin-top: 27px;
+    margin-top: 29px;
   }
 }
 
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .food-benefits {
-    @include paddings(15px, 47px);
+    @include paddings(15px, 47px, 105px, 30px);
   }
 
   .food-benefits__list {
     margin-top: 32px;
-    grid-template-columns: 249px 249px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 280px 280px;
     column-gap: 135px;
     row-gap: 37px;
+  }
+
+  .food-benefits__item {
+    @include zeroing();
+    @include paddings(153px);
+    @include font-sizes(16px, 24px);
+
+    &::after {
+      font-family: $font-main;
+
+      @include font-sizes(280px, 280px);
+      color: $basic-gray;
+      z-index: -1;
+      bottom: -1px;
+      right: 0;
+    }
+
+    &:first-child::after {
+      @include elements(112px, 280px, "1");
+    }
+
+    &:nth-child(2)::after {
+      @include elements(134px, 280px, "2");
+    }
+
+    &:nth-child(3)::after {
+      @include elements(134px, 280px, "3");
+    }
+
+    &:last-child::after {
+      @include elements(136px, 280px, "4");
+    }
+
+    &--nutritious {
+      width: 230px;
+
+      &::before {
+        @include elements(80px, 80px);
+        background-color: $yellow-green;
+        background-image: url("../img/advantage-leaf@1x.png");
+        background-repeat: no-repeat;
+        background-size: 49px 49px;
+        background-position: 50% 55%;
+        left: 0;
+        top: 40px;
+      }
+    }
+
+    &--fast {
+      width: 246px;
+
+      &::before {
+        @include elements(80px, 80px);
+        background-color: $yellow-green;
+        background-image: url("../img/advantage-powder@1x.png");
+        background-repeat: no-repeat;
+        background-size: 50px 50px;
+        background-position: 50% 50%;
+        left: 0;
+        top: 40px;
+      }
+    }
+
+    &--profitable {
+      width: 247px;
+
+      &::before {
+        @include elements(80px, 80px);
+        background-color: $yellow-green;
+        background-image: url("../img/advantage-dining@1x.png");
+        background-repeat: no-repeat;
+        background-size: 50px 50px;
+        background-position: 50% 50%;
+        left: 0;
+        top: 40px;
+      }
+    }
+
+    &--effective {
+      width: 249px;
+
+      &::before {
+        @include elements(80px, 80px);
+        background-color: $yellow-green;
+        background-image: url("../img/advantage-clock@1x.png");
+        background-repeat: no-repeat;
+        background-size: 50px 50px;
+        background-position: 50% 50%;
+        left: 0;
+        top: 40px;
+      }
+    }
   }
 }
 
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .food-benefits {
-    @include paddings(71px, 11px);
+    @include paddings(71px, 11px, 106px, 110px);
     grid-template-columns: 250px 250px 250px 250px;
     grid-template-rows: 280px;
     column-gap: 55px;
@@ -129,8 +220,32 @@
 
   .food-benefits__list {
     margin-top: 32px;
-    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 280px;
-    column-gap: 55px;
+    column-gap: 0;
+  }
+
+  .food-benefits__item {
+    @include zeroing();
+    @include paddings(152px);
+
+    &--nutritious {
+      width: 230px;
+      margin-right: 95px;
+    }
+
+    &--fast {
+      width: 246px;
+      margin-right: 80px;
+    }
+
+    &--profitable {
+      width: 247px;
+      margin-right: 78px;
+    }
+
+    &--effective {
+      width: 250px;
+    }
   }
 }

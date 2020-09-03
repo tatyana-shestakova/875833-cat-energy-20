@@ -10,10 +10,20 @@
   display: block;
 }
 
+.page-footer__logo-text svg {
+  &:hover {
+    fill-opacity: 0.8;
+  }
+
+  &:active {
+    fill-opacity: 0.6;
+  }
+}
+
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
   .page-footer {
-    @include paddings(39px, 32px, 20px, 19px);
+    @include paddings(39px, 0, 20px, 19px);
   }
 
   .page-footer__wrap {
@@ -25,27 +35,57 @@
     width: 128px;
     height: 24px;
     margin-bottom: 32px;
+    margin-right: 1px;
+  }
+
+  .page-footer__copyright {
+    @include paddings(0, 32px);
+    margin-top: 28px;
+  }
+
+  .page-footer__social {
+    padding-top: 23px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
   }
 }
 
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .page-footer {
-    @include paddings(55px, 61px, 0, 0);
+    @include paddings(65px, 50px, 30px, 30px);
   }
 
   .page-footer__wrap {
     justify-content: space-between;
+  }
+
+  .page-footer__social {
+    margin-left: 26px;
+  }
+
+  .page-footer__copyright {
+    margin-top: 1px;
   }
 }
 
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .page-footer {
-    @include paddings(55px, 61px, 0, 0);
+    @include paddings(64px, 48px, 110px, 110px);
   }
 
   .page-footer__wrap {
     justify-content: space-between;
+  }
+
+  .page-footer__social {
+    @include zeroing();
+    margin-left: 25px;
+  }
+
+  .page-footer__copyright {
+    margin-top: 4px;
   }
 }

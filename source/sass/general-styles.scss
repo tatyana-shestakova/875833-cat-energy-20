@@ -27,13 +27,3 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.modal-mobile {
-  display: none;
-}
-
-@media (max-width: $mobile-width-only) {
-  .modal-mobile {
-    display: block;
-  }
-}

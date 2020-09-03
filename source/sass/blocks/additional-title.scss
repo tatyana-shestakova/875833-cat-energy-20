@@ -18,13 +18,13 @@
         @include elements(50px, 50px);
         border-radius: 50%;
         background-color: $yellow-green;
-        right: 207px;
+        left: -70px;
         top: 24px;
       }
 
       &::after {
         @include elements(36px, 50px);
-        right: 215px;
+        left: -63px;
         top: 21px;
         background-image: url("../img/icon-cat-slim.svg");
         background-repeat: no-repeat;
@@ -41,13 +41,13 @@
         @include elements(50px, 50px);
         border-radius: 50%;
         background-color: $yellow-green;
-        right: 207px;
+        left: -70px;
         top: 24px;
       }
 
       &::after {
         @include elements(67px, 28px);
-        right: 200px;
+        left: -78px;
         top: 35px;
         background-image: url("../img/icon-cat-pro.svg");
         background-repeat: no-repeat;
@@ -60,6 +60,48 @@
 @media (min-width: $tablet-width) {
   .additional-title {
     @include font-sizes(36px, 36px);
+
+    &--slimm {
+      text-transform: uppercase;
+      position: relative;
+
+      &::before {
+        @include elements(200px, 200px);
+        border-radius: 50%;
+        background-color: $yellow-green;
+        right: 62px;
+        top: 15px;
+      }
+
+      &::after {
+        @include elements(140px, 192px);
+        right: 92px;
+        top: 5px;
+        background-image: url("../img/icon-cat-slim.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--weight {
+      text-transform: uppercase;
+      position: relative;
+
+      &::before {
+        @include elements(200px, 200px);
+        border-radius: 50%;
+        background-color: $yellow-green;
+        right: 60px;
+        top: 15px;
+      }
+
+      &::after {
+        @include elements(268px, 112px);
+        right: 28px;
+        top: 58px;
+        background-image: url("../img/icon-cat-pro.svg");
+        background-repeat: no-repeat;
+      }
+    }
   }
 }
 
@@ -67,6 +109,47 @@
 @media (min-width: $desktop-width) {
   .additional-title {
     @include font-sizes(36px, 36px);
-    align-self: center;
+
+    &--slimm {
+      text-transform: uppercase;
+      position: relative;
+
+      &::before {
+        @include elements(100px, 100px);
+        border-radius: 50%;
+        background-color: $yellow-green;
+        left: -162px;
+        top: -30px;
+      }
+
+      &::after {
+        @include elements(70px, 97px);
+        left: -146px;
+        top: -36px;
+        background-image: url("../img/icon-cat-slim.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--weight {
+      text-transform: uppercase;
+      position: relative;
+
+      &::before {
+        @include elements(100px, 100px);
+        border-radius: 50%;
+        background-color: $yellow-green;
+        left: -162px;
+        top: -30px;
+      }
+
+      &::after {
+        @include elements(134px, 56px);
+        left: -180px;
+        top: -9px;
+        background-image: url("../img/icon-cat-pro.svg");
+        background-repeat: no-repeat;
+      }
+    }
   }
 }

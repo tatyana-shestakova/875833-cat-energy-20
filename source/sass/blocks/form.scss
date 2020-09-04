@@ -13,7 +13,34 @@
 }
 
 .form__input input {
-  @include paddings(12px, 12px);
+  height: 45px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form__more-details--about-pet input {
+  border: 1px solid #e7e7e7;
+
+  &:hover {
+    border-color: $light-telegray;
+  }
+
+  &:focus {
+    border: 2px solid $gray-brown;
+  }
+}
+
+.form__more-details--about-owner input {
+  border: 1px solid $light-telegray;
+
+  &:focus {
+    border: 2px solid $gray-brown;
+  }
+}
+
+.form__filter-radio + label {
+  position: relative;
 }
 
 .form__list {

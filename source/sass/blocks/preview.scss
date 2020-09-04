@@ -16,40 +16,55 @@
   color: $black;
   text-transform: uppercase;
   position: relative;
+
+  &::after {
+    @include elements(24px, 12px);
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    @include elements(32px, 12px);
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: $mobile-width-only) {
   .preview {
     @include paddings(0, 0, 20px, 20px);
     width: 240px;
+    height: 266px;
     margin-left: 20px;
     margin-right: 20px;
   }
 
   .preview__additional-title {
-    margin-left: 71px;
-    padding-top: 30px;
+    margin-left: 72px;
+    padding-top: 31px;
   }
 
   .preview__text {
     color: $gray-brown;
     margin-top: 29px;
-    padding-bottom: 23px;
-    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 23.5px;
+    border-bottom: 1.5px solid #d9d9d9;
+    line-height: 18px;
   }
 
   .preview__preview-button {
-    padding-top: 19px;
+    padding-top: 18px;
     padding-bottom: 22px;
 
     @include font-sizes(16px, 16px);
 
     &::after {
-      @include elements(24px, 12px);
-      background-image: url("../img/icon-right-arrow-long.svg");
-      background-repeat: no-repeat;
-      right: 120px;
-      bottom: 24px;
+      left: 100px;
+      bottom: 23px;
     }
   }
 }
@@ -58,15 +73,15 @@
 @media (min-width: $tablet-width) {
   .preview {
     width: 708px;
+    height: 372px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
   }
 
   .preview__additional-title {
     text-transform: uppercase;
     margin-left: 53px;
-    margin-top: 77px;
+    margin-top: 78px;
   }
 
   .preview__text {
@@ -76,6 +91,11 @@
     width: 377px;
   }
 
+  .preview:last-child .preview__text {
+    width: 340px;
+    margin-top: 25px;
+  }
+
   .preview__preview-button {
     margin-left: 52px;
     margin-top: 52px;
@@ -83,10 +103,15 @@
     @include font-sizes(20px, 30px);
 
     &::after {
-      @include elements(32px, 10px);
-      background-image: url("../img/icon-right-arrow-verylong.svg");
-      background-repeat: no-repeat;
-      bottom: 10px;
+      bottom: 8px;
+      left: 134px;
+    }
+  }
+
+  .preview:last-child .preview__preview-button {
+    margin-top: 51px;
+
+    &::after {
       left: 130px;
     }
   }
@@ -96,14 +121,17 @@
 @media (min-width: $desktop-width) {
   .preview {
     width: 570px;
+    height: 374px;
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
   }
 
   .preview__additional-title {
+    @include zeroing();
     text-transform: uppercase;
     margin-top: 77px;
+    margin-left: 214px;
   }
 
   .preview__text {
@@ -111,5 +139,30 @@
     margin-left: 52px;
     margin-top: 73px;
     width: 467px;
+  }
+
+  .preview:last-child .preview__text {
+    margin-left: 52px;
+    margin-top: 73px;
+    width: 467px;
+  }
+
+  .preview__preview-button {
+    margin-left: 52px;
+    margin-top: 27px;
+
+    &::after {
+      bottom: 8px;
+      left: 136px;
+    }
+  }
+
+  .preview:last-child .preview__preview-button {
+    margin-left: 52px;
+    margin-top: 27px;
+
+    &::after {
+      left: 130px;
+    }
   }
 }

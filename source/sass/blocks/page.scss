@@ -16,17 +16,13 @@
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .page__body {
-    width: 710px;
-
-    @include paddings(0, 0, 30px, 30px);
+    width: 768px;
   }
 }
 
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .page__body {
-    width: 1220px;
-
-    @include paddings(0, 0, 110px, 110px);
+    width: 1440px;
   }
 }

@@ -19,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
-    background-position: 0% 80%, 0% 0%;
+    background-position: 50% 79.5%, 0% 0%;
     color: $white;
 
     @include paddings (0, 0, 20px, 20px);
@@ -27,18 +27,21 @@
 
   .program-header__main-title {
     @include zeroing();
-    padding-top: 23px;
+    padding-top: 27px;
   }
 
   .program-header__text {
     @include zeroing();
-    margin-top: 29px;
+    margin-top: 23px;
     text-transform: uppercase;
+    margin-right: 2px;
   }
 
   .program-header__button {
     align-self: stretch;
-    margin-top: 302px;
+    margin-top: 301px;
+
+    @include paddings(11px, 11px);
   }
 }
 
@@ -47,24 +50,25 @@
   .program-header {
     flex-direction: column;
     background-image: url("../img/index-can-tablet@1x.jpg");
-    background-position: 100% 100%;
+    background-position: 49% 101%;
+    margin-bottom: 2px;
   }
 
   .program-header__main-title {
-    margin-left: 87px;
-    margin-bottom: 41px;
+    margin-left: 88px;
+    margin-bottom: 42px;
   }
 
   .program-header__text {
-    margin-left: 88px;
+    margin-left: 89px;
 
     @include font-sizes(20px, 20px);
     text-transform: uppercase;
   }
 
   .program-header__button {
-    margin-left: 82px;
-    margin-top: 49px;
+    margin-left: 83px;
+    margin-top: 48px;
     width: 244px;
   }
 }
@@ -72,27 +76,33 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .program-header {
-    grid-column: 1 / -1;
+    @include zeroing();
+    width: 920px;
+    height: 499px;
     flex-direction: column;
     background-image: url("../img/index-can-desktop@1x.png");
-    background-position: 80% 50%;
+    background-position: 100% 100%;
     margin-bottom: 82px;
+    background-color: transparent;
+    position: absolute;
+    top: 142px;
+    left: 230px;
   }
 
   .program-header__main-title {
-    margin-left: 80px;
-    margin-bottom: 40px;
+    @include zeroing();
+    margin-top: 80px;
+    margin-bottom: 41px;
   }
 
   .program-header__text {
-    margin-left: 80px;
-
+    @include zeroing();
     @include font-sizes(20px, 20px);
     text-transform: uppercase;
   }
 
   .program-header__button {
-    margin-left: 80px;
+    @include zeroing();
     margin-top: 52px;
     width: 244px;
   }

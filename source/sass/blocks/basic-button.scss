@@ -6,9 +6,25 @@
   color: $white;
   background-color: $yellow-green;
 
+  &:hover {
+    background-color: $herbal;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--more {
     background-color: $basic-gray;
     color: $gray-brown;
+
+    &:hover {
+      background-color: $smoky-white;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
 
@@ -16,6 +32,10 @@
 @media (max-width: $mobile-width-only) {
   .basic-button {
     @include paddings(7px, 7px);
+
+    &--accented {
+      @include paddings(11px, 11px);
+    }
   }
 }
 
@@ -24,5 +44,27 @@
   .basic-button {
     @include paddings(9px, 9px);
     @include font-sizes(16px, 20px);
+
+    &--accented {
+      font-size: 20px;
+      line-height: 0;
+
+      @include paddings(28px, 27px);
+    }
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .basic-button {
+    @include paddings(9px, 9px);
+    @include font-sizes(16px, 20px);
+
+    &--accented {
+      font-size: 20px;
+      line-height: 0;
+
+      @include paddings(27px, 27px);
+    }
   }
 }

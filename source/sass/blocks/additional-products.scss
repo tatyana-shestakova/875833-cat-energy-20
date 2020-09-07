@@ -47,6 +47,7 @@
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .additional-products {
+    @include paddings(0, 0, 30px, 30px);
     margin-top: 68px;
     margin-bottom: 76px;
   }

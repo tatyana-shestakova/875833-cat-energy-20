@@ -12,12 +12,12 @@
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
   .additional-products {
-    @include paddings(28px, 35px);
+    @include paddings(29px, 35px);
   }
 
   .additional-products__additional-title {
     padding-left: 19px;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 
   .additional-products__list {
@@ -29,8 +29,10 @@
   .additional-products__item {
     @include paddings(13px, 18px);
     border-top: 1px solid $light-telegray;
+    height: 97px;
 
     &:last-child {
+      @include paddings(12px, 18px);
       border-bottom: 1px solid $light-telegray;
     }
   }

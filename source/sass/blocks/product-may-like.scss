@@ -30,17 +30,21 @@
   }
 
   .product-may-like__title {
-    @include font-sizes(16px, 16px);
+    @include font-sizes(16px, 16px, 0, 1px);
   }
 
   .product-may-like__description {
     margin-top: 13px;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   .product-may-like__description-table {
     @include font-sizes(14px, 14px);
     width: 280px;
+  }
+
+  .product-may-like__description-table td:last-child{
+    text-align: right;
   }
 }
 

@@ -1,5 +1,5 @@
 .additional-title {
-  color: $black;
+  color: red;
   font-weight: normal;
 }
 
@@ -51,6 +51,15 @@
         top: 35px;
         background-image: url("../img/icon-cat-pro.svg");
         background-repeat: no-repeat;
+      }
+    }
+
+    &--accented {
+      &::after {
+        @include elements(52.5px, 3px);
+        background-color: $yellow-green;
+        right: 0;
+        top: 12px;
       }
     }
   }

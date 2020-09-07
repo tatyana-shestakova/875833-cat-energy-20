@@ -3,6 +3,69 @@
   list-style: none;
 }
 
-.slider__toggle {
-  margin-top: 27px;
+// Мобильная версия
+@media (max-width: $mobile-width-only) {
+  .slider__list {
+    position: relative;
+    margin-bottom: 39px;
+  }
+
+  .slider__item {
+    &--after {
+      position: absolute;
+      top: 0;
+      display: none;
+    }
+  }
+
+  .slider__toggle {
+    margin: 0 auto;
+  }
+}
+
+// Планшетная версия
+@media (min-width: $tablet-width) {
+  .slider {
+    width: 768px;
+    height: 462px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .slider__item {
+    width: 690px;
+    height: 517px;
+    position: absolute;
+    top: -80px;
+    left: 240px;
+  }
+
+  .slider__toggle {
+    position: absolute;
+    bottom: 65px;
+  }
+}
+
+// Десктопная версия
+@media (min-width: $desktop-width) {
+  .slider {
+    width: 690px;
+  }
+
+  .slider__item {
+    width: 365px;
+    height: 536px;
+    position: absolute;
+    top: -80px;
+    left: 240px;
+  }
+
+  .slider__toggle {
+    position: absolute;
+    bottom: 64px;
+    left: 116px;
+  }
 }

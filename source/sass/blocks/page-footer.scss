@@ -54,7 +54,7 @@
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .page-footer {
-    @include paddings(65px, 50px, 30px, 30px);
+    @include paddings(60px, 50px, 30px, 30px);
   }
 
   .page-footer__wrap {
@@ -73,7 +73,7 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .page-footer {
-    @include paddings(64px, 48px, 110px, 110px);
+    @include paddings(63px, 48px, 110px, 110px);
   }
 
   .page-footer__wrap {

@@ -12,7 +12,7 @@
   vertical-align: middle;
 }
 
-.best-offer_picture {
+.best-offer__picture {
   fill: $white;
 }
 
@@ -34,10 +34,18 @@
     align-items: center;
     width: 161px;
     height: 188px;
+    margin-top: 28px;
   }
 
   .best-offer__link span {
     text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .best-offer__picture {
+    fill: $white;
+    width: 58px;
+    height: 60px;
   }
 }
 

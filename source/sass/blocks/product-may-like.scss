@@ -30,7 +30,8 @@
   }
 
   .product-may-like__title {
-    @include font-sizes(16px, 16px, 0, 1px);
+    @include font-sizes(16px, 16px);
+    @include paddings(0, 0, 0, 1px);
   }
 
   .product-may-like__description {
@@ -43,7 +44,7 @@
     width: 280px;
   }
 
-  .product-may-like__description-table td:last-child{
+  .product-may-like__description-table td:last-child {
     text-align: right;
   }
 }
@@ -61,14 +62,26 @@
     @include font-sizes(20px, 20px);
   }
 
+  .product-may-like__description {
+    margin-top: 2px;
+  }
+
   .product-may-like__description-table {
     @include font-sizes(16px, 20px);
     width: 226px;
   }
 
+  .product-may-like__description-table td {
+    text-align: right;
+  }
+
+  .product-may-like__description-table td:last-child {
+    width: 92px;
+  }
+
   .product-may-like__button {
     width: 632px;
-    margin-top: 23px;
+    margin-top: 21px;
   }
 }
 
@@ -79,10 +92,29 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   .product-may-like__description-table {
-    width: 287px;
+    width: 335px;
+    position: absolute;
+    right: 245px;
+    top: 13px;
+  }
+
+  .product-may-like__description-table td {
+    @include zeroing();
+    text-align: left;
+  }
+
+  .product-may-like__description-table td:first-child {
+    width: 245px;
+
+    @include paddings(0, 0, 0, 9px);
+  }
+
+  .product-may-like__description-table td:last-child {
+    width: 80px;
   }
 
   .product-may-like__button {

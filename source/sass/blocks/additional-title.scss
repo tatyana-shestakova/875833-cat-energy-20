@@ -1,5 +1,5 @@
 .additional-title {
-  color: red;
+  color: $black;
   font-weight: normal;
 }
 
@@ -62,6 +62,39 @@
         top: 12px;
       }
     }
+
+    &--about-owner {
+      position: relative;
+
+      &::after {
+        @include elements(99px, 3px);
+        background-color: $yellow-green;
+        right: -20px;
+        top: 12px;
+      }
+    }
+
+    &--comment {
+      position: relative;
+
+      &::after {
+        @include elements(158px, 3px);
+        background-color: $yellow-green;
+        right: -20px;
+        top: 14px;
+      }
+    }
+
+    &--selection {
+      position: relative;
+
+      &::after {
+        @include elements(136px, 3px);
+        background-color: $yellow-green;
+        right: -20px;
+        top: 14px;
+      }
+    }
   }
 }
 
@@ -111,6 +144,60 @@
         background-repeat: no-repeat;
       }
     }
+
+    &--about-owner {
+      position: relative;
+
+      &::before {
+        @include elements(30px, 3px);
+        background-color: $yellow-green;
+        left: -68px;
+        top: 22px;
+      }
+
+      &::after {
+        @include elements(145px, 3px);
+        background-color: $yellow-green;
+        right: -65px;
+        top: 22px;
+      }
+    }
+
+    &--comment {
+      position: relative;
+
+      &::before {
+        @include elements(30px, 3px);
+        background-color: $yellow-green;
+        left: -68px;
+        top: 22px;
+      }
+
+      &::after {
+        @include elements(478px, 3px);
+        background-color: $yellow-green;
+        right: 0;
+        top: 22px;
+      }
+    }
+
+    &--selection {
+      position: relative;
+
+      &::before {
+        @include elements(30px, 3px);
+        background-color: $yellow-green;
+        left: -68px;
+        top: 22px;
+      }
+
+      &::after {
+        @include elements(446px, 3px);
+        background-color: $yellow-green;
+        right: 0;
+        top: 22px;
+      }
+    }
   }
 }
 
@@ -158,6 +245,60 @@
         top: -9px;
         background-image: url("../img/icon-cat-pro.svg");
         background-repeat: no-repeat;
+      }
+    }
+
+    &--about-owner {
+      position: relative;
+
+      &::before {
+        @include elements(70px, 3px);
+        background-color: $yellow-green;
+        left: -110px;
+        top: 22px;
+      }
+
+      &::after {
+        @include elements(778px, 3px);
+        background-color: $yellow-green;
+        right: -111px;
+        top: 22px;
+      }
+    }
+
+    &--comment {
+      position: relative;
+
+      &::before {
+        @include elements(70px, 3px);
+        background-color: $yellow-green;
+        left: -110px;
+        top: 22px;
+      }
+
+      &::after {
+        @include elements(1108px, 3px);
+        background-color: $yellow-green;
+        right: -110px;
+        top: 22px;
+      }
+    }
+
+    &--selection {
+      position: relative;
+
+      &::before {
+        @include elements(70px, 3px);
+        background-color: $yellow-green;
+        left: -110px;
+        top: 22px;
+      }
+
+      &::after {
+        @include elements(1078px, 3px);
+        background-color: $yellow-green;
+        right: -113px;
+        top: 22px;
       }
     }
   }

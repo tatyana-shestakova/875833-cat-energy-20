@@ -63,16 +63,16 @@
         <p class="selection-program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="selection-program__form form" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__more-details form__more-details--about-pet">
-            <p class="form__input">
+            <p class="form__input form__input--pet-name">
               <label for="pet-name">Имя:*</label>
               <input id="pet-name" type="text" name="name" placeholder="Барсик" required>
             </p>
-            <p class="form__input">
-              <label for="pet-weight">Вес:*</label>
+            <p class="form__input form__input--pet-weight">
+              <label for="pet-weight">Вес (кг):*</label>
               <input id="pet-weight" type="number" name="weight" placeholder="7" required>
             </p>
-            <p class="form__input">
-              <label for="pet-age">Возраст:*</label>
+            <p class="form__input form__input--pet-age">
+              <label for="pet-age">Возраст (лет):</label>
               <input id="pet-age" type="number" name="age" placeholder="7" required>
             </p>
           </div>
@@ -93,9 +93,9 @@
             </ul>
           </div>
           <div class="form__more-details form__more-details--about-owner">
-            <h2 class="form__additional-title  additional-title additional-title--accented">Контактные данные  (владельца кота)</h2>
+            <h2 class="form__additional-title  additional-title additional-title--about-owner">Контактные данные  (владельца кота)</h2>
             <p class="form__input">
-              <label for="user-email">Email:*</label>
+              <label for="user-email">E-mail:*</label>
               <input id="user-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
             </p>
             <p class="form__input">
@@ -104,13 +104,13 @@
             </p>
           </div>
           <div class="form__more-details form__more-details--comment">
-            <h2 class="form__additional-title  additional-title additional-title--accented">Комментарий</h2>
+            <h2 class="form__additional-title  additional-title additional-title--comment">Комментарий</h2>
             <p class="form__textarea">
               <textarea name="text">Расскажите обо всех повадках кота</textarea>
             </p>
           </div>
           <div class="form__more-details form__more-details--checkbox-selection">
-            <h2 class="form__additional-title additional-title additional-title--accented">Дополнительно</h2>
+            <h2 class="form__additional-title additional-title additional-title--selection">Дополнительно</h2>
             <ul class="form__list form__list--checkbox-selection">
               <li class="form__item">
                 <input class="form__filter-checkbox visually-hidden" type="checkbox" name="additionally-sweetener" id="filter-sweetener" checked>
@@ -133,14 +133,14 @@
           <div class="form__button-wrap">
             <button class="form__button basic-button" type="submit">Отправить заявку</button>
             <p class="form__text">
-              <small>* — Обязательные поля</small>
+              <span>* — Обязательные поля</span>
             </p>
         </div>
         </form>
       </section>
       <section class="map map--accented">
         <div class="map__wrap">
-          <h4 class="map__subtitle">Приглашаем<br/>к сотрудничеству дилеров!</h4>
+          <h4 class="map__subtitle">Приглашаем<br>к сотрудничеству дилеров!</h4>
           <div class="map__address"> <span>ул. Большая Конюшенная, д. 19/8</span> <span>Санкт-Петербург</span></div>
         </div>
         <a class="map__address--link" href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323117%2C59.938635&sll=37.622504%2C55.753215&sspn=1.068420%2C0.401182&z=16">

@@ -3,7 +3,8 @@
 }
 
 .product__link {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .product__link p {
@@ -94,8 +95,14 @@
   }
 
   .product__link {
+    width: 324px;
+    height: 208px;
     position: absolute;
-    top: -70px;
+    top: -83px;
+
+    &--small {
+      top: -47px;
+    }
   }
 
   .product__description {
@@ -121,7 +128,7 @@
   }
 
   .product__title {
-    @include font-sizes(20px, 24px);
+    @include font-sizes(20px, 23px);
     display: block;
     width: 150px;
     text-align: center;
@@ -150,8 +157,14 @@
   }
 
   .product__title {
+    @include font-sizes(20px, 21px);
     left: 10px;
     top: -61px;
+  }
+
+  .product__link {
+    width: 245px;
+    height: 208px;
   }
 
   .product__button {

@@ -97,6 +97,34 @@
     }
   }
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .food-benefits__item {
+      &--nutritious {
+        &::after {
+          background-image: url("../img/advantage-leaf@2x.png");
+        }
+      }
+
+      &--fast {
+        &::after {
+          background-image: url("../img/advantage-powder@2x.png");
+        }
+      }
+
+      &--profitable {
+        &::after {
+          background-image: url("../img/advantage-dining@2x.png");
+        }
+      }
+
+      &--effective {
+        &::after {
+          background-image: url("../img/advantage-clock@2x");
+        }
+      }
+    }
+  }
+
   .food-benefits__main-title {
     margin-top: 29px;
   }
@@ -204,6 +232,34 @@
         background-position: 50% 50%;
         left: 0;
         top: 40px;
+      }
+    }
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .food-benefits__item {
+      &--nutritious {
+        &::before {
+          background-image: url("../img/advantage-leaf@2x.png");
+        }
+      }
+
+      &--fast {
+        &::before {
+          background-image: url("../img/advantage-powder@2x.png");
+        }
+      }
+
+      &--profitable {
+        &::before {
+          background-image: url("../img/advantage-dining@2x.png");
+        }
+      }
+
+      &--effective {
+        &::before {
+          background-image: url("../img/advantage-clock@2x");
+        }
       }
     }
   }

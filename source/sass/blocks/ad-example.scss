@@ -37,7 +37,7 @@
   .ad-example {
     background-color: $dark-smoky-white;
 
-    @include paddings(27px, 25px, 21px, 20px);
+    @include paddings(28px, 25px, 21px, 20px);
 
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@
   }
 
   .ad-example__main-title {
-    margin-bottom: 33px;
+    margin-bottom: 38px;
     align-self: flex-start;
   }
 
@@ -59,11 +59,17 @@
     @include font-sizes();
   }
 
-  .ad-example__result {
+  .ad-example__result-wrap {
+    @include paddings(0, 0, 0, 1px);
     margin-top: 25px;
     margin-bottom: 26px;
+    width: 278px;
+  }
+
+  .ad-example__result {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 33px;
   }
 
   .ad-example__item {
@@ -71,23 +77,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
 
   .ad-example__figures {
     @include font-sizes(24px, 24px);
+    @include paddings(14px);
+    width: 123px;
+    height: 41px;
+    text-align: center;
+    border: 1px solid $light-telegray;
+    border-radius: 3px;
   }
 
   .ad-example__description {
     @include font-sizes(12px, 12px);
+    @include paddings(0, 0, 5px, 5px);
     width: 77px;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+    position: absolute;
+    z-index: 2;
+    background-color: $dark-smoky-white;
+    top: 47px;
   }
 
   .ad-example__cost {
     @include font-sizes(14px, 20px);
-    margin-bottom: 42px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
 
@@ -97,14 +116,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top: 1px solid #e6e6e6;
   }
 
   .ad-example__main-title {
+    margin-top: 43px;
     margin-bottom: 63px;
     align-self: flex-start;
   }
 
   .ad-example__wrap {
+    @include paddings(0, 0, 31px, 30px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,6 +148,7 @@
     display: flex;
     justify-content: space-between;
     width: 366px;
+    height: 77px;
   }
 
   .ad-example__item {
@@ -133,52 +156,86 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
 
   .ad-example__figures {
     @include font-sizes(30px, 37px);
+    @include paddings(14px);
+    width: 160px;
+    height: 56px;
+    text-align: center;
+    border: 1px solid $light-telegray;
+    border-radius: 3px;
   }
 
   .ad-example__description {
     @include font-sizes(14px, 14px);
-    width: 77px;
+    @include paddings(0, 0, 8px, 7px);
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+    position: absolute;
+    background-color: $white;
+    z-index: 2;
+    top: 64px;
   }
 
   .ad-example__cost {
     width: 174px;
 
-    @include font-sizes(20px, 20px);
+    @include paddings(8px);
+    @include font-sizes(20px, 28px);
     display: inline-block;
     vertical-align: middle;
     text-align: right;
+  }
+
+  .ad-example__slider {
+    margin-top: 191px;
+    background-color: $dark-smoky-white;
   }
 }
 
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .ad-example {
+    @include paddings(0, 0, 0, 110px);
+    background-color: $basic-gray;
+    height: 462px;
+    margin-top: 194px;
+    border: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
   }
 
   .ad-example__wrap {
+    @include zeroing();
     display: flex;
     flex-direction: column;
     width: 436px;
+    height: 317px;
+    justify-content: space-between;
     align-items: flex-start;
+    background-color: $basic-gray;
   }
 
   .ad-example__slider {
+    @include paddings(0, 0, 110px, 0);
     width: 690px;
+    margin-top: 0;
+    background-color: $basic-gray;
+    align-self: flex-end;
   }
 
   .ad-example__main-title {
-    margin-bottom: 146px;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: -135px;
   }
 
   .ad-example__result-wrap {
@@ -186,7 +243,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 69px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -195,7 +252,7 @@
   }
 
   .ad-example__result {
-    margin-bottom: 55px;
+    margin-bottom: 56px;
   }
 
   .ad-example__figures {
@@ -204,18 +261,18 @@
 
   .ad-example__description {
     @include font-sizes(14px, 14px);
-    width: 77px;
+    background-color: $basic-gray;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
   }
 
   .ad-example__cost {
-    width: 327px;
-
+    @include paddings();
     @include font-sizes(20px, 20px);
-    display: inline-block;
-    vertical-align: middle;
-    text-align: left;
+    width: 327px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
   }
 }

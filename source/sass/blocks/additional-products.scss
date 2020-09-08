@@ -12,12 +12,12 @@
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
   .additional-products {
-    @include paddings(28px, 35px);
+    @include paddings(29px, 35px);
   }
 
   .additional-products__additional-title {
     padding-left: 19px;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 
   .additional-products__list {
@@ -29,8 +29,10 @@
   .additional-products__item {
     @include paddings(13px, 18px);
     border-top: 1px solid $light-telegray;
+    height: 97px;
 
     &:last-child {
+      @include paddings(12px, 18px);
       border-bottom: 1px solid $light-telegray;
     }
   }
@@ -45,26 +47,48 @@
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .additional-products {
+    @include paddings(0, 0, 30px, 30px);
     margin-top: 68px;
     margin-bottom: 76px;
   }
 
   .additional-products__additional-title {
     margin-bottom: 80px;
+    margin-left: 37px;
+    position: relative;
+
+    &::before {
+      @include elements(30px, 3px);
+      background-color: $yellow-green;
+      left: -67px;
+      top: 21px;
+    }
+
+    &::after {
+      @include elements(328px, 3px);
+      background-color: $yellow-green;
+      right: -30px;
+      top: 21px;
+    }
   }
 
   .additional-products__list {
     grid-template-columns: 708px;
     grid-template-rows: auto;
+    height: 556px;
   }
 
   .additional-products__item {
     border: 1px solid $light-telegray;
 
-    @include paddings(26px, 28px, 37px, 38px);
+    @include paddings(26px, 27.5px, 37px, 38px);
 
     &:not(:last-child) {
       border-bottom: none;
+    }
+
+    &:nth-child(3) {
+      @include paddings(24px, 28px, 37px, 38px);
     }
   }
 
@@ -76,6 +100,7 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .additional-products {
+    @include paddings(0, 0, 110px, 110px);
     margin-top: 75px;
     margin-bottom: 86px;
     display: flex;
@@ -85,12 +110,28 @@
   }
 
   .additional-products__additional-title {
+    margin-left: 0;
     width: 100%;
+
+    &::before {
+      @include elements(70px, 3px);
+      background-color: $yellow-green;
+      left: -110px;
+      top: 21px;
+    }
+
+    &::after {
+      @include elements(957px, 3px);
+      background-color: $yellow-green;
+      right: -110px;
+      top: 21px;
+    }
   }
 
   .additional-products__list {
     grid-template-columns: 896px;
     grid-template-rows: auto;
+    height: 288px;
   }
 
   .additional-products__item {
@@ -98,10 +139,14 @@
     border-top: 1px solid $light-telegray;
     border-bottom: 1px solid $light-telegray;
 
-    @include paddings(15px, 17px, 0, 0);
+    @include paddings(15px, 14.5px, 0, 0);
 
     &:not(:last-child) {
       border-bottom: none;
+    }
+
+    &:nth-child(3) {
+      @include paddings(15px, 17px, 0, 0);
     }
   }
 

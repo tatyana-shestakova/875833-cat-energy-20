@@ -1,3 +1,7 @@
+.form label {
+  display: block;
+}
+
 .form__more-details {
   color: $gray-brown;
   text-transform: uppercase;
@@ -14,12 +18,8 @@
 
 .form__input input {
   height: 45px;
-  border: none;
   outline: none;
   box-sizing: border-box;
-}
-
-.form__more-details--about-pet input {
   border: 1px solid #e7e7e7;
 
   &:hover {
@@ -29,18 +29,71 @@
   &:focus {
     border: 2px solid $gray-brown;
   }
+
+  &::placeholder {
+    text-transform: uppercase;
+    color: $gray-brown;
+  }
 }
 
-.form__more-details--about-owner input {
-  border: 1px solid $light-telegray;
-
-  &:focus {
-    border: 2px solid $gray-brown;
-  }
+.invalid {
+  border: 2px solid $deep-pink;
 }
 
 .form__filter-radio + label {
   position: relative;
+  cursor: pointer;
+
+  &::before {
+    @include elements(38px, 38px);
+    background-color: $white;
+    border: 1px solid $light-telegray;
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form__filter-radio:checked + label::after {
+  @include elements(18px, 18px);
+  background-color: $yellow-green;
+  border-radius: 50%;
+  left: 11px;
+  top: 11px;
+}
+
+.form__filter-checkbox + label {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    @include elements(38px, 38px);
+    background-color: $white;
+    border: 1px solid $light-telegray;
+  }
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form__filter-checkbox:checked + label::after {
+  @include elements(18px, 12px);
+  border-bottom: 2px solid $yellow-green;
+  border-left: 2px solid $yellow-green;
+  transform: rotate(-45deg);
+  left: 11px;
+  top: 10px;
 }
 
 .form__list {
@@ -58,6 +111,7 @@
 }
 
 .form__textarea textarea {
+  @include zeroing();
   text-transform: uppercase;
   color: $gray-brown;
 }
@@ -82,26 +136,26 @@
     @include font-sizes(16px, 18px);
 
     &--about-pet {
-      @include paddings(0, 27px, 20px, 19px);
+      @include paddings(0, 24px, 20px, 19px);
       border-bottom: 1px solid #d9d9d9;
     }
 
     &--radio-selection {
-      @include paddings(20px, 22px, 20px, 19px);
+      @include paddings(25px, 22px, 20px, 19px);
       border-bottom: 1px solid #d9d9d9;
       color: $black-brown;
     }
 
     &--about-owner {
-      @include paddings(26px, 0, 20px, 19px);
+      @include paddings(30px, 0, 20px, 19px);
     }
 
     &--comment {
-      @include paddings(27px, 0, 20px, 19px);
+      @include paddings(28px, 0, 20px, 19px);
     }
 
     &--checkbox-selection {
-      @include paddings(27px, 34px, 20px, 19px);
+      @include paddings(28px, 28px, 20px, 19px);
     }
   }
 
@@ -112,24 +166,68 @@
   }
 
   .form__input input {
-    @include paddings(12px, 12px);
+    @include paddings(0, 0, 0, 15px);
     flex-grow: 1;
+    height: 45px;
+
+    &::placeholder {
+      @include font-sizes(16px 18px);
+      text-transform: uppercase;
+    }
   }
 
-  .form__input label {
-    margin-right: 9px;
+  .form__input--pet-name label {
+    margin-right: 14px;
+  }
+
+  .form__input--pet-weight label {
+    margin-right: 17px;
+  }
+
+  .form__input--pet-age label {
+    margin-right: 16px;
   }
 
   .form__list {
     padding-left: 1px;
+
+    &--checkbox-selection {
+      height: 157px;
+    }
   }
 
   .form__item {
-    padding-bottom: 19px;
+    @include paddings(0, 19px);
 
     &:last-child {
-      padding-bottom: 0;
+      @include paddings(0, 0);
     }
+  }
+
+  .form__more-details--radio-selection .form__item {
+    &:not(:last-child) {
+      @include paddings(0, 25px, 0, 30px);
+    }
+
+    &:last-child {
+      @include paddings(0, 5px, 0, 30px);
+    }
+  }
+
+  .form__filter-radio + label {
+    &::before {
+      width: 28px;
+      height: 28px;
+      top: -5px;
+      left: -46px;
+    }
+  }
+
+  .form__filter-radio:checked + label::after {
+    width: 13.5px;
+    height: 13.5px;
+    left: -37.5px;
+    top: 3.5px;
   }
 
   .form__item label {
@@ -137,7 +235,19 @@
   }
 
   .form__additional-title {
-    padding-bottom: 34px;
+    @include paddings(0, 30px);
+  }
+
+  .form__more-details--about-owner .form__additional-title {
+    @include paddings(0, 33px);
+  }
+
+  .form__more-details--about-owner label {
+    margin-right: 11px;
+  }
+
+  .form__more-details--comment .form__additional-title {
+    @include paddings(0, 34px);
   }
 
   .form__textarea {
@@ -145,8 +255,37 @@
   }
 
   .form__textarea textarea {
-    width: 280px;
-    height: 150px;
+    @include paddings(13px, 0, 0, 15px);
+    width: 263px;
+    height: 135px;
+  }
+
+  .form__more-details--checkbox-selection .form__additional-title {
+    @include paddings(0, 40px);
+  }
+
+  .form__more-details--checkbox-selection .form__item {
+    &:not(:last-child) {
+      @include paddings(0, 25px, 0, 30px);
+    }
+
+    &:last-child {
+      @include paddings(0, 0, 0, 30px);
+    }
+  }
+
+  .form__filter-checkbox + label {
+    &::before {
+      width: 28px;
+      height: 28px;
+      left: -46px;
+      top: -5px;
+    }
+  }
+
+  .form__filter-checkbox:checked + label::after {
+    left: -40px;
+    top: -1px;
   }
 
   .form__button-wrap {
@@ -157,12 +296,15 @@
   }
 
   .form__button {
+    @include font-sizes(16px, 16px);
     @include paddings(12px, 12px);
     width: 280px;
   }
 
   .form__text {
+    @include zeroing();
     @include font-sizes(14px, 16px);
+    margin-top: 23px;
   }
 }
 
@@ -179,7 +321,30 @@
   }
 
   .form__more-details {
-    margin-bottom: 65px;
+    &--about-pet {
+      @include paddings(0, 72px, 67px, 71px);
+    }
+
+    &--radio-selection {
+      @include paddings(28px, 0, 0, 87px);
+      border: 1px solid #e7e7e7;
+      width: 541px;
+      height: 166px;
+      margin-left: 71px;
+      margin-right: 67px;
+    }
+
+    &--about-owner {
+      @include paddings(75px, 0, 65px, 69px);
+    }
+
+    &--comment {
+      @include paddings(66px, 0, 0, 69px);
+    }
+
+    &--checkbox-selection {
+      @include paddings(60px, 50px, 0, 70px);
+    }
   }
 
   .form__additional-title {
@@ -191,41 +356,93 @@
       display: grid;
       grid-template-columns: 221px 221px;
       grid-template-rows: auto;
-      row-gap: 32px;
+      height: 112px;
       column-gap: 123px;
     }
   }
 
   .form__input {
+    @include zeroing();
+    @include paddings(0, 20px);
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    @include zeroing();
   }
 
   .form__input input {
+    @include zeroing();
+    @include paddings(0, 0, 0, 21px);
     flex-grow: 1;
+    height: 52px;
   }
 
   .form__input label {
     margin-right: 13px;
   }
 
+  .form__more-details--radio-selection .form__item {
+    &:not(:last-child) {
+      @include paddings(2px, 22px);
+    }
+  }
+
+  .form__filter-radio + label {
+    &::before {
+      top: -5px;
+      left: -60px;
+    }
+  }
+
+  .form__filter-radio:checked + label::after {
+    left: -49px;
+    top: 6px;
+  }
+
   .form__textarea textarea {
-    width: 631px;
-    height: 174px;
+    @include paddings(14px, 0, 0, 19px);
+    width: 610px;
+    height: 158px;
+    border-color: #e7e7e7;
+  }
+
+  .form__more-details--checkbox-selection .form__additional-title {
+    margin-bottom: 61px;
+  }
+
+  .form__more-details--checkbox-selection .form__item {
+    &:not(:last-child) {
+      @include paddings(0, 43px, 0, 59px);
+    }
+
+    &:last-child {
+      @include paddings(0, 0, 0, 59px);
+    }
+  }
+
+  .form__filter-checkbox + label {
+    &::before {
+      left: -58px;
+      top: -5px;
+    }
+  }
+
+  .form__filter-checkbox:checked + label::after {
+    left: -48px;
+    top: 4.5px;
   }
 
   .form__button-wrap {
+    @include paddings(0, 0, 0, 71px);
     display: flex;
     flex-direction: row;
     width: 523px;
     justify-content: space-between;
+    height: 52px;
   }
 
   .form__button {
-    @include paddings(12px, 12px);
+    @include paddings(14px, 14px);
+    @include font-sizes(20px);
     width: 282px;
   }
 
@@ -244,7 +461,23 @@
   }
 
   .form__more-details {
+    &--about-pet {
+      @include zeroing();
+      height: 196px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &--radio-selection {
+      @include zeroing();
+      @include paddings(28px, 0, 0, 88px);
+      width: 480px;
+    }
+
     &--about-owner {
+      @include zeroing();
+      @include paddings(69px);
       grid-column-start: 1;
       grid-column-end: -1;
       display: grid;
@@ -254,6 +487,8 @@
     }
 
     &--comment {
+      @include zeroing();
+      @include paddings(68px);
       grid-column-start: 1;
       grid-column-end: -1;
       display: grid;
@@ -262,6 +497,8 @@
     }
 
     &--checkbox-selection {
+      @include zeroing();
+      @include paddings(61px);
       grid-column-start: 1;
       grid-column-end: -1;
     }
@@ -273,6 +510,7 @@
       grid-template-columns: 221px 221px 221px 221px;
       grid-template-rows: 40px;
       column-gap: 104px;
+      height: 50px;
     }
   }
 
@@ -282,8 +520,8 @@
   }
 
   .form__textarea textarea {
-    width: 1220px;
-    height: 174px;
+    width: 1199px;
+    height: 158px;
   }
 
   .form__additional-title {
@@ -296,12 +534,27 @@
   }
 
   .form__button-wrap {
+    @include zeroing();
     width: 829px;
     display: flex;
     justify-content: space-between;
+    margin-top: 47px;
+    margin-bottom: 10px;
   }
 
   .form__button {
     width: 568px;
+  }
+
+  .form__input label {
+    margin-right: 16px;
+  }
+
+  .form__more-details--about-owner .form__additional-title {
+    margin-bottom: 75px;
+  }
+
+  .form__more-details--checkbox-selection .form__additional-title {
+    margin-bottom: 62px;
   }
 }

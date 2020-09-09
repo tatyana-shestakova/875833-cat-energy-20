@@ -14,6 +14,7 @@
   .slider__item {
     width: 320px;
     height: 240px;
+
     &--after {
       position: absolute;
       top: 0;
@@ -46,6 +47,7 @@
     background-color: $dark-smoky-white;
     left: 0;
     top: 0;
+
     &--after {
       display: none;
     }
@@ -53,7 +55,7 @@
 
   .slider__picture {
     position: absolute;
-    top:-170px;
+    top: -170px;
     left: 46px;
   }
 
@@ -76,6 +78,7 @@
     background-color: $basic-gray;
     left: 0;
     top: 0;
+
     &--after {
       background-color: $dark-smoky-white;
       display: none;

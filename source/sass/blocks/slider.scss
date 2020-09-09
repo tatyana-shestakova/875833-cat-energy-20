@@ -7,10 +7,14 @@
 @media (max-width: $mobile-width-only) {
   .slider__list {
     position: relative;
-    margin-bottom: 39px;
+    margin-bottom: 23px;
+    width: 320px;
   }
 
   .slider__item {
+    width: 320px;
+    height: 240px;
+
     &--after {
       position: absolute;
       top: 0;
@@ -19,6 +23,7 @@
   }
 
   .slider__toggle {
+    @include paddings(0, 0, 21px, 20px);
     margin: 0 auto;
   }
 }
@@ -36,11 +41,22 @@
   }
 
   .slider__item {
-    width: 690px;
-    height: 517px;
+    width: 768px;
+    height: 462px;
     position: absolute;
-    top: -80px;
-    left: 240px;
+    background-color: $dark-smoky-white;
+    left: 0;
+    top: 0;
+
+    &--after {
+      display: none;
+    }
+  }
+
+  .slider__picture {
+    position: absolute;
+    top: -170px;
+    left: 46px;
   }
 
   .slider__toggle {
@@ -52,20 +68,39 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .slider {
-    width: 690px;
+    width: 760px;
   }
 
   .slider__item {
-    width: 365px;
-    height: 536px;
+    width: 760px;
+    height: 462px;
     position: absolute;
-    top: -80px;
-    left: 240px;
+    background-color: $basic-gray;
+    left: 0;
+    top: 0;
+
+    &--after {
+      background-color: $dark-smoky-white;
+      display: none;
+      left: 60px;
+      width: 810px;
+    }
+  }
+
+  .slider__picture {
+    position: absolute;
+    top: -190px;
+    left: 110px;
+
+    &--after {
+      top: -190px;
+      left: 50px;
+    }
   }
 
   .slider__toggle {
     position: absolute;
     bottom: 64px;
-    left: 116px;
+    left: 186px;
   }
 }

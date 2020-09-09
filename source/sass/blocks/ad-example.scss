@@ -37,7 +37,7 @@
   .ad-example {
     background-color: $dark-smoky-white;
 
-    @include paddings(28px, 25px, 21px, 20px);
+    @include paddings(28px, 25px);
 
     display: flex;
     flex-direction: column;
@@ -45,6 +45,7 @@
   }
 
   .ad-example__wrap {
+    @include paddings(0, 0, 21px, 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +63,7 @@
   .ad-example__result-wrap {
     @include paddings(0, 0, 0, 1px);
     margin-top: 25px;
-    margin-bottom: 26px;
+    margin-bottom: 14px;
     width: 278px;
   }
 

@@ -82,10 +82,18 @@
         <div class="ad-example__slider slider">
           <ul class="slider__list">
             <li class="slider__item slider__item--before">
-              <img src="img/before-mobile@1x.png" width="311" height="232" alt="Здесь котик ещё толстенький">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="slider__picture" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="690" height="517" alt="Здесь котик ещё толстенький">
+              </picture>
             </li>
             <li class="slider__item slider__item--after">
-              <img src="img/after-mobile@1x.png" width="311" height="232" alt="И вот котик похудел без лишних усилий">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="slider__picture slider__picture--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="690" height="517" alt="И вот котик похудел без лишних усилий">
+              </picture>
             </li>
           </ul>
           <div class="slider__toggle picture-toggle">
@@ -106,7 +114,11 @@
           <div class="map__address"> <span>ул. Большая Конюшенная, д. 19/8</span> <span>Санкт-Петербург</span></div>
         </div>
         <a class="map__address--link" href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323117%2C59.938635&sll=37.622504%2C55.753215&sspn=1.068420%2C0.401182&z=16">
-          <img src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Наш адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="1440" height="400" alt="Наш адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          </picture>
         </a>
       </section>
     </main>

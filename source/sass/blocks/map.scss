@@ -28,7 +28,7 @@
 
   .map__wrap {
     justify-content: space-between;
-    background-color: $basic-gray;
+    background-color: $white;
 
     @include paddings(29px, 22px, 19px, 19px);
   }
@@ -45,9 +45,19 @@
     &--link {
       width: 320px;
       height: 362px;
+      background-color: $basic-gray;
       position: absolute;
       top: 76px;
       z-index: -1;
+
+      &::before {
+        @include elements(60px, 53px);
+        background-image: url("../img/map-pin.png");
+        background-repeat: no-repeat;
+        background-size: 60px 53px;
+        left: 130px;
+        top: 178px;
+      }
     }
   }
 }
@@ -55,20 +65,23 @@
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .map {
+    @include paddings(2px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    height: 601px;
+    height: 599px;
+
+    &--accented {
+      background-color: $basic-gray;
+    }
   }
 
   .map__wrap {
-    margin-top: 4px;
     justify-content: space-between;
     align-items: center;
-    height: 201px;
+    height: 186px;
     width: 625px;
-    background-color: $basic-gray;
   }
 
   .map__subtitle {
@@ -87,8 +100,18 @@
 
     &--link {
       width: 768px;
-      height: 400px;
-      background-color: $gainsborough;
+      height: 404px;
+      background-color: $basic-gray;
+      position: relative;
+
+      &::before {
+        @include elements(115px, 106px);
+        background-image: url("../img/map-pin.png");
+        background-repeat: no-repeat;
+        background-size: 115px 106px;
+        left: 326px;
+        top: 150px;
+      }
     }
   }
 
@@ -101,6 +124,7 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .map {
+    @include paddings();
     width: 1440px;
     height: 400px;
     position: relative;
@@ -113,8 +137,9 @@
     height: 201px;
     position: absolute;
     background-color: $white;
-    top: 92px;
+    top: 97px;
     left: 110px;
+    z-index: 2;
 
     @include paddings(0, 0, 89px, 76px);
   }
@@ -133,6 +158,15 @@
       width: 1440px;
       height: 400px;
       background-color: $gainsborough;
+
+      &::before {
+        @include elements(115px, 106px);
+        background-image: url("../img/map-pin.png");
+        background-repeat: no-repeat;
+        background-size: 115px 106px;
+        left: 1003px;
+        top: 150px;
+      }
     }
   }
 

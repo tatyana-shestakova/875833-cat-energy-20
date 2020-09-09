@@ -119,7 +119,7 @@
 
       &--effective {
         &::after {
-          background-image: url("../img/advantage-clock@2x");
+          background-image: url("../img/advantage-clock@2x.png");
         }
       }
     }
@@ -241,24 +241,28 @@
       &--nutritious {
         &::before {
           background-image: url("../img/advantage-leaf@2x.png");
+          background-size: 50px 50px;
         }
       }
 
       &--fast {
         &::before {
           background-image: url("../img/advantage-powder@2x.png");
+          background-size: 50px 50px;
         }
       }
 
       &--profitable {
         &::before {
           background-image: url("../img/advantage-dining@2x.png");
+          background-size: 50px 50px;
         }
       }
 
       &--effective {
         &::before {
-          background-image: url("../img/advantage-clock@2x");
+          background-image: url("../img/advantage-clock@2x.png");
+          background-size: 50px 50px;
         }
       }
     }

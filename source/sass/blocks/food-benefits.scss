@@ -19,9 +19,9 @@
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
   .food-benefits {
+    @include paddings(0, 42px, 20px, 21px);
     margin: 0 auto;
     width: 279px;
-    @include paddings(0, 42px, 20px, 21px);
   }
 
   .food-benefits__list {

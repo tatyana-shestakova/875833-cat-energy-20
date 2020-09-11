@@ -164,9 +164,9 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .catalog {
+    @include paddings(0, 0, 110px, 110px);
     width: 1220px;
     margin: 0 auto;
-    @include paddings(0, 0, 110px, 110px);
   }
 
   .catalog__main-title {

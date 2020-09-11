@@ -47,10 +47,10 @@
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .page-header__contain {
-    margin: 0 auto;
-    width: 708px;
     @include font-sizes(18px, 24px);
     @include paddings (42px, 10px, 30px, 30px);
+    margin: 0 auto;
+    width: 708px;
     justify-content: flex-end;
     align-items: center;
     font-weight: normal;
@@ -74,6 +74,7 @@
 @media (min-width: $desktop-width) {
   .page-header {
     width: 100%;
+
     &--main {
       &::before {
         @include elements (50%, 696px);

@@ -14,6 +14,7 @@
   &:last-child {
     padding-bottom: 0;
   }
+
   &--email,
   &--phone {
     position: relative;
@@ -48,7 +49,6 @@
   &:valid {
     background-color: $white;
   }
-
 }
 
 .form__icon {
@@ -67,13 +67,13 @@
   }
 }
 
-  input:focus ~ .form__icon {
-    fill: $yellow-green;
-  }
+input:focus ~ .form__icon {
+  fill: $yellow-green;
+}
 
-  input:focus:invalid ~ .form__icon {
-    fill: $deep-pink;
-  }
+input:focus:invalid ~ .form__icon {
+  fill: $deep-pink;
+}
 
 .form__filter-radio + label {
   position: relative;

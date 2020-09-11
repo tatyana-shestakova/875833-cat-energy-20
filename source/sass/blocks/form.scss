@@ -14,6 +14,10 @@
   &:last-child {
     padding-bottom: 0;
   }
+  &--email,
+  &--phone {
+    position: relative;
+  }
 }
 
 .form__input input {
@@ -21,6 +25,7 @@
   outline: none;
   box-sizing: border-box;
   border: 1px solid #e7e7e7;
+  text-transform: uppercase;
 
   &:hover {
     border-color: $light-telegray;
@@ -28,17 +33,47 @@
 
   &:focus {
     border: 2px solid $gray-brown;
+    background-color: $white;
   }
 
   &::placeholder {
     text-transform: uppercase;
     color: $gray-brown;
   }
+
+  &:focus:invalid {
+    border: 2px solid $deep-pink;
+  }
+
+  &:valid {
+    background-color: $white;
+  }
+
 }
 
-.invalid {
-  border: 2px solid $deep-pink;
+.form__icon {
+  position: absolute;
+  right: 16px;
+  fill: $black-brown;
+
+  &--email {
+    right: 20px;
+    top: 21px;
+  }
+
+  &--phone {
+    right: 19px;
+    top: 18px;
+  }
 }
+
+  input:focus ~ .form__icon {
+    fill: $yellow-green;
+  }
+
+  input:focus:invalid ~ .form__icon {
+    fill: $deep-pink;
+  }
 
 .form__filter-radio + label {
   position: relative;
@@ -173,6 +208,18 @@
     &::placeholder {
       @include font-sizes(16px 18px);
       text-transform: uppercase;
+    }
+  }
+
+  .form__icon {
+    &--email {
+      right: 16px;
+      top: 16px;
+    }
+
+    &--phone {
+      right: 13px;
+      top: 13px;
     }
   }
 
@@ -380,6 +427,11 @@
     margin-right: 13px;
   }
 
+  .form__input--email label {
+    margin-left: 2px;
+    margin-right: 19px;
+  }
+
   .form__more-details--radio-selection .form__item {
     &:not(:last-child) {
       @include paddings(2px, 22px);
@@ -533,6 +585,14 @@
     @include zeroing();
   }
 
+  .form__input label {
+    margin-right: 16px;
+  }
+
+  .form__input--email label {
+    margin-right: 19px;
+  }
+
   .form__button-wrap {
     @include zeroing();
     width: 829px;
@@ -544,10 +604,6 @@
 
   .form__button {
     width: 568px;
-  }
-
-  .form__input label {
-    margin-right: 16px;
   }
 
   .form__more-details--about-owner .form__additional-title {

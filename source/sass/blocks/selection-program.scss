@@ -1,3 +1,7 @@
+.selection-program {
+  margin: 0 auto;
+}
+
 .selection-program__main-title {
   @include zeroing();
 }
@@ -11,6 +15,7 @@
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
   .selection-program {
+    width: 320px;
     @include paddings(26px, 30px);
     border-top: 1px solid #d9d9d9;
   }
@@ -29,6 +34,10 @@
 
 // Планшетная версия
 @media (min-width: $tablet-width) {
+  .selection-program {
+    width: 769px;
+  }
+
   .selection-program__main-title {
     @include zeroing();
     @include paddings(0, 0, 0, 29px);
@@ -47,12 +56,13 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .selection-program {
+    width: 1220px;
     @include paddings(0, 0, 110px, 110px);
   }
 
   .selection-program__main-title {
     @include zeroing();
-    margin-top: 70px;
+    margin-top: 80px;
     margin-bottom: 56px;
   }
 

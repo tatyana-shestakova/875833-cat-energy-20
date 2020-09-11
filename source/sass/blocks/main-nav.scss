@@ -17,46 +17,23 @@
     border: none;
     outline: none;
     display: block;
+    top: 21px;
+    right: 17px;
   }
 
-  .main-nav__menu-toggle--closed {
-    width: 24px;
-    height: 14.5px;
-    top: 23px;
-    right: 20px;
-    border-top: 2px solid $black;
-    border-bottom: 2px solid $black;
+  .main-nav__toggle {
+    &--open {
+      width: 30px;
+      height: 18px;
+    }
 
-    &::before {
-      @include elements(24px);
-      border-top: 2px solid $black;
-      top: 6px;
-      left: 0;
+    &--closed {
+      width: 18px;
+      height: 18px;
     }
   }
 
-  .main-nav__menu-toggle--closed + .main-nav__wrap {
+  .menu-closed {
     display: none;
-  }
-
-  .main-nav__menu-toggle--open {
-    width: 18px;
-    height: 18px;
-    top: 22px;
-    right: 23px;
-
-    &::before,
-    &::after {
-      @include elements(25px);
-      border-top: 1.5px solid $black;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
   }
 }

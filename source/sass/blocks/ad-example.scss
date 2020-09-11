@@ -1,4 +1,4 @@
-.ad-example {
+.ad-example__contain {
   background-color: $white;
 }
 
@@ -34,7 +34,7 @@
 
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
-  .ad-example {
+  .ad-example__contain {
     background-color: $dark-smoky-white;
 
     @include paddings(28px, 25px);
@@ -45,6 +45,8 @@
   }
 
   .ad-example__wrap {
+    margin: 0 auto;
+    width: 279px;
     @include paddings(0, 0, 21px, 20px);
     display: flex;
     flex-direction: column;
@@ -113,11 +115,15 @@
 
 // Планшетная версия
 @media (min-width: $tablet-width) {
-  .ad-example {
+  .ad-example__contain {
     display: flex;
     flex-direction: column;
     align-items: center;
     border-top: 1px solid #e6e6e6;
+  }
+
+  .ad-example__wrap {
+    width: 708px;
   }
 
   .ad-example__main-title {
@@ -195,22 +201,31 @@
   .ad-example__slider {
     margin-top: 191px;
     background-color: $dark-smoky-white;
+    height: 462px;
+    width: 100%;
   }
 }
 
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .ad-example {
-    @include paddings(0, 0, 0, 110px);
+    width: 100%;
+    height: 462px;
     background-color: $basic-gray;
+  }
+
+  .ad-example__contain {
+    margin: 0 auto;
+    width: 1220px;
     height: 462px;
     margin-top: 194px;
     border: none;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     position: relative;
+    background-color: $basic-gray;
   }
 
   .ad-example__wrap {

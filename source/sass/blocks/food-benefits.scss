@@ -19,6 +19,8 @@
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
   .food-benefits {
+    margin: 0 auto;
+    width: 279px;
     @include paddings(0, 42px, 20px, 21px);
   }
 
@@ -133,11 +135,13 @@
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .food-benefits {
-    @include paddings(15px, 47px, 105px, 30px);
+    @include paddings(18px, 47px, 105px, 30px);
+    width: 633px;
+    margin: 0 auto;
   }
 
   .food-benefits__list {
-    margin-top: 32px;
+    margin-top: 30px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 280px 280px;
     column-gap: 135px;
@@ -273,6 +277,8 @@
 @media (min-width: $desktop-width) {
   .food-benefits {
     @include paddings(71px, 11px, 106px, 110px);
+    width: 1224px;
+    margin: 0 auto;
     grid-template-columns: 250px 250px 250px 250px;
     grid-template-rows: 280px;
     column-gap: 55px;

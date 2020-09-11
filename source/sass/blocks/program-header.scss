@@ -1,5 +1,4 @@
 .program-header {
-  background-color: $white;
   background-repeat: no-repeat;
   display: flex;
 }
@@ -15,11 +14,24 @@
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
   .program-header {
+    position: relative;
+
+    &::before {
+      @include elements(100%, 305px);
+      background-color: $herbal;
+      z-index: -1;
+    }
+  }
+
+  .program-header__wrap {
+    width: 280px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
     background-size: 280px auto, 320px auto;
+    background-repeat: no-repeat;
     background-position: 50% 79.5%, 0% 0%;
     color: $white;
 
@@ -27,9 +39,10 @@
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .program-header {
+    .program-header__wrap {
       background-image: url("../img/index-can-mobile@2x.png"), url("../img/index-background-mobile@2x.jpg");
       background-size: 280px auto, 320px auto;
+      background-repeat: no-repeat;
     }
   }
 
@@ -55,7 +68,10 @@
 
 // Планшетная версия
 @media (min-width: $tablet-width) {
-  .program-header {
+  .program-header__wrap {
+    @include paddings(0, 0, 30px, 29px);
+    width: 709px;
+    margin: 0 auto;
     flex-direction: column;
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-position: 49% 101%;
@@ -64,9 +80,10 @@
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .program-header {
+    .program-header__wrap {
       background-image: url("../img/index-can-tablet@2x.jpg");
       background-size: 709px auto;
+      background-repeat: no-repeat;
     }
   }
 
@@ -92,7 +109,12 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .program-header {
+    position: absolute;
+  }
+
+  .program-header__wrap {
     @include zeroing();
+    margin: 0 auto;
     width: 920px;
     height: 499px;
     flex-direction: column;
@@ -103,12 +125,12 @@
     margin-bottom: 82px;
     background-color: transparent;
     position: absolute;
-    top: 142px;
-    left: 230px;
+    top: -558px;
+    left: 80px;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .program-header {
+    .program-header__wrap {
       background-image: url("../img/index-can-desktop@2x.jpg");
       background-size: 552px auto;
     }

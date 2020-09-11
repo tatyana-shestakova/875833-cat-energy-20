@@ -1,5 +1,6 @@
 .copyright__link {
   display: block;
+  height: 34px;
   font-family: $font-additional;
   color: $gray-brown;
 
@@ -13,7 +14,7 @@
 .copyright__logo {
   width: 27px;
   height: 34px;
-  fill: $gray-brown;
+  fill: $dull-gray;
 
   &:hover {
     fill: $yellow-green;

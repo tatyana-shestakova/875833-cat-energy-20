@@ -1,4 +1,4 @@
-.page-header {
+.page-header__contain {
   background-color: $white;
   color: $black;
   font-family: $font-main;
@@ -6,6 +6,7 @@
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .page-header__logo-icon {
@@ -22,10 +23,11 @@
 
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
-  .page-header {
+  .page-header__contain {
     @include font-sizes(20px, 20px);
     flex-direction: column;
     position: relative;
+    width: 320px;
   }
 
   .page-header__wrap {
@@ -44,9 +46,11 @@
 
 // Планшетная версия
 @media (min-width: $tablet-width) {
-  .page-header {
+  .page-header__contain {
     @include font-sizes(18px, 24px);
     @include paddings (42px, 10px, 30px, 30px);
+    margin: 0 auto;
+    width: 708px;
     justify-content: flex-end;
     align-items: center;
     font-weight: normal;
@@ -69,26 +73,41 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .page-header {
+    width: 100%;
+
+    &--main {
+      &::before {
+        @include elements (50%, 696px);
+        background-color: $herbal;
+        right: 0;
+      }
+    }
+  }
+
+  .page-header__contain {
     @include zeroing();
     @include font-sizes(20px, 30px);
     @include paddings (70px, 0, 110px, 110px);
-    align-items: center;
+    margin: 0 auto;
+    width: 1220px;
 
     &--main {
+      @include zeroing();
+      @include paddings (70px, 592px, 110px, 110px);
+      margin: 0 auto;
+      width: 1220px;
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
-      background-position: 100% -2px;
+      background-position: 100% 0;
       background-size: 720px 696px;
       font-weight: normal;
       position: relative;
-
-      @include zeroing();
-      @include paddings (70px, 592px, 110px, 110px);
+      background-color: transparent;
     }
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .page-header--main {
+    .page-header__contain--main {
       background-image: url("img/index-background-desktop@2x.jpg");
       background-size: 720px 696px;
     }

@@ -26,23 +26,14 @@
     grid-template-columns: 1fr;
     grid-template-rows: 810px auto;
   }
-
-  .ad-program__header {
-    @include paddings(0, 0, 30px, 29px);
-  }
-
-  .ad-program__preview {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
 }
 
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .ad-program {
     @include paddings(0, 0, 110px, 110px);
-    margin-top: 76px;
+    width: 1220px;
+    margin: 0 auto;
     grid-template-columns: 570px 570px;
     grid-template-rows: auto;
     column-gap: 80px;

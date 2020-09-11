@@ -14,6 +14,7 @@
   .slider__item {
     width: 320px;
     height: 240px;
+    position: relative;
 
     &--after {
       position: absolute;
@@ -31,8 +32,6 @@
 // Планшетная версия
 @media (min-width: $tablet-width) {
   .slider {
-    width: 768px;
-    height: 462px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -41,22 +40,22 @@
   }
 
   .slider__item {
+    position: relative;
+    margin: 0 auto;
     width: 768px;
     height: 462px;
-    position: absolute;
-    background-color: $dark-smoky-white;
-    left: 0;
-    top: 0;
 
     &--after {
+      position: absolute;
       display: none;
+      top: 0;
     }
   }
 
   .slider__picture {
     position: absolute;
-    top: -170px;
-    left: 46px;
+    top: -168px;
+    left: 47px;
   }
 
   .slider__toggle {
@@ -74,16 +73,14 @@
   .slider__item {
     width: 760px;
     height: 462px;
-    position: absolute;
     background-color: $basic-gray;
-    left: 0;
-    top: 0;
+    position: relative;
 
     &--after {
       background-color: $dark-smoky-white;
       display: none;
-      left: 60px;
-      width: 810px;
+      position: absolute;
+      top: 0;
     }
   }
 

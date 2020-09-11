@@ -48,7 +48,8 @@
     width: 137px;
     display: flex;
     justify-content: space-between;
-    margin-left: 2px;
+    align-items: center;
+    margin-left: 5px;
   }
 }
 
@@ -66,17 +67,17 @@
     border: none;
   }
 
-  .social__link--vkontakte svg {
+  .social__icon-vk {
     width: 30px;
     height: 22px;
   }
 
-  .social__link--instagram svg {
+  .social__icon-insta {
     width: 23px;
     height: 23px;
   }
 
-  .social__link--facebook svg {
+  .social__icon-fb {
     width: 14px;
     height: 24px;
   }

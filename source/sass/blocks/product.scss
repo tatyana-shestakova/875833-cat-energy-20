@@ -11,7 +11,8 @@
   @include zeroing();
 }
 
-.product__title {
+.product__title a {
+  display: block;
   font-family: $font-main;
   color: $black-brown;
   text-transform: uppercase;

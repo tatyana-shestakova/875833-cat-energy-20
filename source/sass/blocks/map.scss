@@ -66,6 +66,15 @@
     z-index: 1;
   }
 
+  .map__frame {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    height: 362px;
+    border: none;
+  }
+
   .map__picture {
     margin: 0 auto;
     display: block;
@@ -130,6 +139,16 @@
   .map__wrap-link {
     background-color: $basic-gray;
     width: 100%;
+    position: relative;
+  }
+
+  .map__frame {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    height: 401px;
+    border: none;
   }
 
   .map__picture {

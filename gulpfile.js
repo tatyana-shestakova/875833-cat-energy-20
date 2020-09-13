@@ -16,9 +16,9 @@ const del = require("del");
 
 const clean = () => {
   return del("build");
- };
+};
 
- exports.clean = clean;
+exports.clean = clean;
 
 //Copy
 
@@ -88,16 +88,16 @@ const images = () => {
     imagemin.mozjpeg({progressive: true}),
     imagemin.svgo()
   ]))
- }
- exports.images = images;
+}
+exports.images = images;
 
- // WebP
+// WebP
 
- const createWebp = () => {
+const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("build/img"))
- }
+}
  exports.webp = createWebp;
 
 

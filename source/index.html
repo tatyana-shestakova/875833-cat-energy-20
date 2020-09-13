@@ -20,14 +20,14 @@
         </div>
         <nav class="page-header__nav main-nav">
           <button class="main-nav__menu-toggle " type="button">
-            <svg class="main-nav__toggle main-nav__toggle--open" width="30" height="18" aria-label="Открыть меню">
+            <svg class="main-nav__toggle main-nav__toggle--open hidden" width="30" height="18" aria-label="Открыть меню">
               <use xlink:href="img/sprite.svg#icon-mobile-menu"></use>
             </svg>
-            <svg class="main-nav__toggle main-nav__toggle--closed menu-closed" width="30" height="18" aria-label="Закрыть меню">
+            <svg class="main-nav__toggle main-nav__toggle--closed" width="30" height="18" aria-label="Закрыть меню">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
-          <div class="main-nav__wrap menu-closed">
+          <div class="main-nav__wrap">
             <ul class="main-nav__list site-list">
               <li class="site-list__item site-list__item--current site-list__item--main"><a class="site-list__link" aria-label="Вы здесь" tabindex="0">Главная</a></li>
               <li class="site-list__item site-list__item--main"><a class="site-list__link" href="catalog.html">Каталог продукции</a></li>
@@ -100,9 +100,9 @@
                   <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                   <img class="slider__picture" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="690" height="517" alt="Здесь котик ещё толстенький">
-                </picture>
+                  </picture>
               </li>
-              <li class="slider__item slider__item--after">
+              <li class="slider__item slider__item--after hidden">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
@@ -157,9 +157,9 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/">
-                <span class="visually-hidden">Мы в Instagram</span>
-                <svg class="social__icon-vk" width="23" height="16">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/">
+                <span class="visually-hidden">Мы в Вконтакте</span>
+                <svg class="social__icon-vk" width="29" height="17">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
@@ -167,7 +167,7 @@
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/">
                 <span class="visually-hidden">Мы в Instagram</span>
-                <svg class="social__icon-insta" width="16" height="16">
+                <svg class="social__icon-insta" width="23" height="23">
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
                 </svg>
               </a>

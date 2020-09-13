@@ -21,7 +21,7 @@
 // Мобильная версия
 @media (max-width: $mobile-width-only) {
   .page-footer__wrap {
-    @include paddings(39px, 0, 20px, 19px);
+    @include paddings(40px, 0, 20px, 19px);
     margin: 0 auto;
     width: 281px;
     flex-direction: column;
@@ -77,7 +77,7 @@
 
   .page-footer__social {
     @include zeroing();
-    margin-left: 25px;
+    margin-left: 29px;
   }
 
   .page-footer__copyright {

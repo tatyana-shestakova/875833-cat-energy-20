@@ -17,6 +17,8 @@
     border: none;
     outline: none;
     display: block;
+    width: 30px;
+    height: 18px;
     top: 21px;
     right: 17px;
   }
@@ -31,9 +33,5 @@
       width: 18px;
       height: 18px;
     }
-  }
-
-  .menu-closed {
-    display: none;
   }
 }

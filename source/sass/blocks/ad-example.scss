@@ -238,7 +238,7 @@
   }
 
   .ad-example__slider {
-    @include paddings(0, 0, 110px, 0);
+    @include paddings();
     width: 690px;
     margin-top: 0;
     background-color: $basic-gray;

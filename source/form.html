@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -20,14 +20,14 @@
         </div>
         <nav class="page-header__nav main-nav">
           <button class="main-nav__menu-toggle " type="button">
-            <svg class="main-nav__toggle main-nav__toggle--open" width="30" height="18" aria-label="Открыть меню">
+            <svg class="main-nav__toggle main-nav__toggle--open hidden" width="30" height="18" aria-label="Открыть меню">
               <use xlink:href="img/sprite.svg#icon-mobile-menu"></use>
             </svg>
-            <svg class="main-nav__toggle main-nav__toggle--closed menu-closed" width="30" height="18" aria-label="Закрыть меню">
+            <svg class="main-nav__toggle main-nav__toggle--closed" width="30" height="18" aria-label="Закрыть меню">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
-          <div class="main-nav__wrap menu-closed">
+          <div class="main-nav__wrap">
             <ul class="main-nav__list site-list">
               <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
               <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог продукции</a></li>
@@ -155,9 +155,9 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/">
-                <span class="visually-hidden">Мы в Instagram</span>
-                <svg class="social__icon-vk" width="23" height="16">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/">
+                <span class="visually-hidden">Мы в Вконтакте</span>
+                <svg class="social__icon-vk" width="29" height="17">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
@@ -165,7 +165,7 @@
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/">
                 <span class="visually-hidden">Мы в Instagram</span>
-                <svg class="social__icon-insta" width="16" height="16">
+                <svg class="social__icon-insta" width="23" height="23">
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
                 </svg>
               </a>
@@ -173,7 +173,7 @@
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/">
                 <span class="visually-hidden">Мы в Facebook</span>
-                <svg class="social__icon-fb" width="10" height="19">
+                <svg class="social__icon-fb" width="15" height="28">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
               </a>
@@ -184,7 +184,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">HTML Academy</span>
             <svg class="copyright__logo" width="27" height="34">
-              <use xlink:href="img/sprite.svg#academy-icon"></use>
+              <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
         </div>

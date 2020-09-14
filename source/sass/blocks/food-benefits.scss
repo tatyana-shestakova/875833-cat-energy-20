@@ -16,7 +16,6 @@
   position: relative;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .food-benefits {
     @include paddings(0, 42px, 20px, 21px);
@@ -132,7 +131,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .food-benefits {
     @include paddings(18px, 47px, 105px, 30px);
@@ -273,7 +271,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .food-benefits {
     @include paddings(71px, 12px, 106px, 110px);

@@ -41,7 +41,6 @@
   @include zeroing();
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .catalog {
     border-top: 1px solid #d9d9d9;
@@ -96,7 +95,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .catalog {
     @include paddings(0, 0, 30px, 30px);
@@ -113,7 +111,7 @@
     grid-template-columns: 324px 324px;
     grid-template-rows: auto;
     column-gap: 60px;
-    row-gap: 60px;
+    row-gap: 59.5px;
   }
 
   .catalog__item {
@@ -161,7 +159,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .catalog {
     @include paddings(0, 0, 110px, 110px);

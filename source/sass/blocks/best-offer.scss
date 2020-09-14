@@ -16,7 +16,6 @@
   fill: $white;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .best-offer {
     display: flex;
@@ -57,7 +56,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .best-offer {
     display: flex;
@@ -92,15 +90,14 @@
   }
 
   .best-offer__picture {
-    width: 58.5px;
-    height: 60px;
+    width: 59px;
+    height: 61px;
     position: absolute;
     left: -35px;
-    top: -1px;
+    top: -3px;
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .best-offer {
     display: flex;

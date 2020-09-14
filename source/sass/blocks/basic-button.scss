@@ -28,7 +28,6 @@
   }
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .basic-button {
     @include paddings(7px, 7px);
@@ -39,7 +38,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .basic-button {
     @include paddings(9px, 9px);
@@ -54,7 +52,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .basic-button {
     @include paddings(9px, 9px);

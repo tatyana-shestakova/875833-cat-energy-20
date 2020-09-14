@@ -9,17 +9,16 @@
   display: grid;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .additional-products {
-    @include paddings(29px, 35px);
+    @include paddings(31px, 35px);
     width: 320px;
     margin: 0 auto;
   }
 
   .additional-products__additional-title {
-    margin-right: 20px;
-    margin-bottom: 34px;
+    margin-left: 20px;
+    margin-bottom: 32px;
   }
 
   .additional-products__list {
@@ -51,7 +50,7 @@
   .additional-products {
     width: 768px;
     margin: 0 auto;
-    margin-top: 68px;
+    margin-top: 68.5px;
     margin-bottom: 76px;
   }
 

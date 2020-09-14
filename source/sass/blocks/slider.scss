@@ -12,7 +12,6 @@
   }
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .slider__list {
     position: relative;
@@ -31,7 +30,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .slider {
     position: relative;
@@ -59,7 +57,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .slider {
     width: 760px;

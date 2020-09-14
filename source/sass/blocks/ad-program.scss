@@ -2,8 +2,6 @@
   display: grid;
 }
 
-
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .ad-program {
     grid-template-rows: 480px 266px 266px;
@@ -18,7 +16,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .ad-program {
     @include zeroing();
@@ -28,7 +25,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .ad-program {
     @include paddings(0, 0, 110px, 110px);

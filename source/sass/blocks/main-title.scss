@@ -3,7 +3,6 @@
   color: $black;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .main-title {
     @include font-sizes(36px, 36px);
@@ -14,7 +13,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .main-title {
     @include font-sizes(60px, 60px);

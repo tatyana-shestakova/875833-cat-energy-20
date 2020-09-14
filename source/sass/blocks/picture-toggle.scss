@@ -2,7 +2,6 @@
   text-transform: uppercase;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .picture-toggle {
     @include paddings(0, 0, 0, 5px);
@@ -44,7 +43,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .picture-toggle {
     @include paddings(0, 0, 7px, 3px);
@@ -91,7 +89,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .picture-toggle {
     @include paddings(0, 0, 7px, 3px);

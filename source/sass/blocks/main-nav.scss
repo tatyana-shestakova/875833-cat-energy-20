@@ -8,7 +8,6 @@
   display: none;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .main-nav__menu-toggle {
     @include zeroing();

@@ -157,7 +157,6 @@ input:required:invalid ~ .form__icon {
   font-family: $font-additional;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .form {
     display: flex;
@@ -168,18 +167,18 @@ input:required:invalid ~ .form__icon {
     @include font-sizes(16px, 18px);
 
     &--about-pet {
-      @include paddings(0, 24px, 20px, 19px);
+      @include paddings(1px, 23px, 20px, 19px);
       border-bottom: 1px solid #d9d9d9;
     }
 
     &--radio-selection {
-      @include paddings(25px, 22px, 20px, 19px);
+      @include paddings(26px, 22px, 20px, 19px);
       border-bottom: 1px solid #d9d9d9;
       color: $black-brown;
     }
 
     &--about-owner {
-      @include paddings(30px, 0, 20px, 19px);
+      @include paddings(29px, 0, 20px, 19px);
     }
 
     &--comment {
@@ -262,7 +261,7 @@ input:required:invalid ~ .form__icon {
     &::before {
       width: 28px;
       height: 28px;
-      top: -5px;
+      top: -6px;
       left: -46px;
     }
   }
@@ -352,7 +351,6 @@ input:required:invalid ~ .form__icon {
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .form {
     display: flex;
@@ -415,13 +413,25 @@ input:required:invalid ~ .form__icon {
 
   .form__input input {
     @include zeroing();
-    @include paddings(0, 0, 0, 21px);
+    @include paddings(0, 0, 0, 19px);
     flex-grow: 1;
     height: 52px;
   }
 
   .form__input label {
-    margin-right: 13px;
+    margin-right: 14px;
+  }
+
+  .form__input--pet-name label {
+    margin-right: 15px;
+  }
+
+  .form__input--pet-weight label {
+    margin-right: 20px;
+  }
+
+  .form__input--pet-age label {
+    margin-right: 16px;
   }
 
   .form__input--email label {
@@ -496,11 +506,12 @@ input:required:invalid ~ .form__icon {
   }
 
   .form__text {
+    margin-top: 15px;
+
     @include font-sizes(16px, 16px);
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .form {
     display: grid;

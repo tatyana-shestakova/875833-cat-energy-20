@@ -3,7 +3,6 @@
   font-weight: normal;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .additional-title {
     @include font-sizes(24px, 24px);
@@ -98,7 +97,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .additional-title {
     @include font-sizes(36px, 36px);
@@ -201,7 +199,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .additional-title {
     @include font-sizes(36px, 36px);

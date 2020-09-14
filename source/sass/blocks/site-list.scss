@@ -17,7 +17,6 @@
   }
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .site-list {
     flex-direction: column;
@@ -35,7 +34,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .site-list {
     width: 440px;
@@ -53,11 +51,10 @@
   }
 
   .site-list__link {
-    @include paddings(0, 7px);
+    @include paddings(0, 6px);
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .site-list {
     width: 478px;

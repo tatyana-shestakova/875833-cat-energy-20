@@ -21,7 +21,6 @@
   }
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .copyright__link {
     display: flex;
@@ -39,7 +38,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .copyright__link {
     display: flex;
@@ -58,7 +56,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .copyright__link {
     display: flex;

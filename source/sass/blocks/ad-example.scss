@@ -32,7 +32,6 @@
   text-transform: uppercase;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .ad-example__contain {
     background-color: $dark-smoky-white;
@@ -114,7 +113,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .ad-example__contain {
     display: flex;
@@ -204,7 +202,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .ad-example {
     width: 100%;

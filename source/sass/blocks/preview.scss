@@ -62,13 +62,12 @@
     @include font-sizes(16px, 16px);
 
     &::after {
-      left: 96px;
+      left: 100px;
       bottom: 23px;
     }
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .preview {
     margin: 0 auto;
@@ -118,7 +117,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .preview {
     @include zeroing();

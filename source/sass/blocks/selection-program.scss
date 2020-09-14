@@ -12,7 +12,6 @@
   text-transform: uppercase;
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .selection-program {
     @include paddings(26px, 30px);
@@ -32,7 +31,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .selection-program {
     width: 769px;
@@ -53,7 +51,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .selection-program {
     @include paddings(0, 0, 110px, 110px);

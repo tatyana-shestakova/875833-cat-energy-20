@@ -6,7 +6,6 @@
   @include font-sizes();
 }
 
-// Мобильная версия
 @media (max-width: $mobile-width-only) {
   .page__body {
     width: 100%;
@@ -14,7 +13,6 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .page__body {
     width: 100%;
@@ -22,7 +20,6 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .page__body {
     width: 100%;

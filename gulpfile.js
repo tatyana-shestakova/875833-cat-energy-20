@@ -11,7 +11,6 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
-const htmlmin = require("gulp-html-minifier");
 
 // Clean
 
@@ -113,16 +112,7 @@ const sprite = () => {
 }
 exports.sprite = sprite;
 
-// Html min
 
-const htmlminifier = () => {
-  return gulp.src("source/*.html")
-  .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest("build"))
-}
-
-
-exports.htmlminifier = htmlminifier;
 
 exports.default = gulp.series(
-  clean, copy, styles, images, createWebp, sprite, htmlminifier, server, watcher);
+  clean, copy, styles, images, createWebp, sprite, server, watcher);

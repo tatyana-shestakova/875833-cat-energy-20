@@ -166,6 +166,11 @@
   .product__link {
     width: 245px;
     height: 208px;
+    top: -82px;
+
+    &--small {
+      top: -54px;
+    }
   }
 
   .product__button {
@@ -182,7 +187,7 @@
   }
 
   .product__table td {
-    @include paddings(8px, 7px);
+    @include paddings(8px, 7.5px);
     border-bottom: 1px solid $light-telegray;
   }
 }

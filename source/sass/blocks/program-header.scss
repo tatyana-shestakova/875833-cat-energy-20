@@ -138,8 +138,8 @@
 
   .program-header__main-title {
     @include zeroing();
-    margin-top: 80px;
-    margin-bottom: 41px;
+    margin-top: 81px;
+    margin-bottom: 40px;
   }
 
   .program-header__text {
@@ -150,7 +150,7 @@
 
   .program-header__button {
     @include zeroing();
-    margin-top: 52px;
+    margin-top: 53px;
     width: 244px;
   }
 }

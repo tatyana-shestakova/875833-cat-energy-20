@@ -69,7 +69,7 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .page-footer__wrap {
-    @include paddings(63px, 48px, 110px, 110px);
+    @include paddings(61px, 48px, 110px, 110px);
     justify-content: space-between;
     width: 1220px;
     margin: 0 auto;

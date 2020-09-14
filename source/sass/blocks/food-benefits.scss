@@ -150,7 +150,7 @@
 
   .food-benefits__item {
     @include zeroing();
-    @include paddings(153px);
+    @include paddings(152px);
     @include font-sizes(16px, 24px);
 
     &::after {
@@ -276,7 +276,7 @@
 // Десктопная версия
 @media (min-width: $desktop-width) {
   .food-benefits {
-    @include paddings(71px, 11px, 106px, 110px);
+    @include paddings(71px, 12px, 106px, 110px);
     width: 1224px;
     margin: 0 auto;
     grid-template-columns: 250px 250px 250px 250px;
@@ -293,7 +293,7 @@
 
   .food-benefits__item {
     @include zeroing();
-    @include paddings(152px);
+    @include paddings(151px);
 
     &--nutritious {
       width: 230px;

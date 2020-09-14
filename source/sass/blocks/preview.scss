@@ -123,7 +123,7 @@
   .preview {
     @include zeroing();
     width: 570px;
-    height: 374px;
+    height: auto;
     display: flex;
     flex-direction: column;
     margin-top: 76px;
@@ -134,6 +134,7 @@
     text-transform: uppercase;
     margin-top: 77px;
     margin-left: 214px;
+    margin-bottom: 1px;
   }
 
   .preview__text {
@@ -152,6 +153,7 @@
   .preview__preview-button {
     margin-left: 52px;
     margin-top: 27px;
+    margin-bottom: 59px;
 
     &::after {
       bottom: 8px;

@@ -26,11 +26,13 @@
     @include font-sizes(20px, 20px);
     flex-direction: column;
     position: relative;
-    width: 320px;
+    width: 100%;
   }
 
   .page-header__wrap {
     @include paddings (11px, 16px, 23px, 20px);
+    width: 277px;
+    margin: 0 auto;
   }
 
   .page-header__nav {

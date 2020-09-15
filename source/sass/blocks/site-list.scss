@@ -26,11 +26,18 @@
     border-top: 1px solid #e6e6e6;
     display: flex;
     justify-content: center;
+
+    &:last-child {
+      border-bottom: 1px solid #e6e6e6;
+    }
   }
 
   .site-list__link {
     @include paddings(22px, 23px);
     outline-color: #e6e6e6;
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 

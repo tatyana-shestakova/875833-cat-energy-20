@@ -14,6 +14,15 @@
     @include paddings(31px, 35px);
     width: 320px;
     margin: 0 auto;
+    background-color: $white;
+
+    &::before {
+      @include elements(30vw, 2px);
+      background-color: $yellow-green;
+      right: 0;
+      top: 2083px;
+      z-index: -2;
+    }
   }
 
   .additional-products__additional-title {
@@ -45,29 +54,37 @@
   }
 }
 
-// Планшетная версия
 @media (min-width: $tablet-width) {
   .additional-products {
-    width: 768px;
-    margin: 0 auto;
+    width: 100%;
     margin-top: 68.5px;
     margin-bottom: 76px;
-  }
-
-  .additional-products__additional-title {
-    margin-bottom: 80px;
-    margin-left: 67px;
     position: relative;
 
     &::before {
-      @include elements(30px, 3px);
+      @include elements(100%, 2px);
+      background-color: $yellow-green;
+      top: 21px;
+    }
+  }
+
+  .additional-products__additional-title {
+    @include paddings(0, 0, 36px, 37px);
+    width: 635px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    background-color: $white;
+    position: relative;
+
+    &::before {
+      @include elements(30px, 2px);
       background-color: $yellow-green;
       left: -67px;
       top: 21px;
     }
 
     &::after {
-      @include elements(328px, 3px);
+      @include elements(297px, 2px);
       background-color: $yellow-green;
       right: 0;
       top: 21px;
@@ -102,11 +119,9 @@
   }
 }
 
-// Десктопная версия
 @media (min-width: $desktop-width) {
   .additional-products {
-    @include paddings(0, 0, 110px, 110px);
-    width: 1220px;
+    width: 100%;
     margin-top: 75px;
     margin-bottom: 86px;
     display: flex;
@@ -116,20 +131,22 @@
   }
 
   .additional-products__additional-title {
-    margin-left: 0;
-    width: 100%;
+    @include paddings(0, 0, 35px, 40px);
+    width: 1220px;
+    margin: 0 auto;
+    margin-bottom: 80px;
 
     &::before {
-      @include elements(70px, 3px);
+      @include elements(70px, 2px);
       background-color: $yellow-green;
       left: -110px;
       top: 21px;
     }
 
     &::after {
-      @include elements(957px, 3px);
+      @include elements(957px, 2px);
       background-color: $yellow-green;
-      right: -110px;
+      right: -73px;
       top: 21px;
     }
   }

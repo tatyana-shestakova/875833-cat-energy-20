@@ -179,14 +179,38 @@ input:required:invalid ~ .form__icon {
 
     &--about-owner {
       @include paddings(29px, 0, 20px, 19px);
+
+      &::before {
+        @include elements(30vw, 2px);
+        background-color: $yellow-green;
+        right: 0;
+        top: 824.5px;
+        z-index: -2;
+      }
     }
 
     &--comment {
       @include paddings(28px, 0, 20px, 19px);
+
+      &::before {
+        @include elements(30vw, 2px);
+        background-color: $yellow-green;
+        right: 0;
+        top: 1038.5px;
+        z-index: -2;
+      }
     }
 
     &--checkbox-selection {
       @include paddings(28px, 28px, 20px, 19px);
+
+      &::before {
+        @include elements(30vw, 2px);
+        background-color: $yellow-green;
+        right: 0;
+        top: 1276px;
+        z-index: -2;
+      }
     }
   }
 
@@ -378,14 +402,41 @@ input:required:invalid ~ .form__icon {
 
     &--about-owner {
       @include paddings(75px, 0, 65px, 69px);
+      background-color: white;
+
+      &::before {
+        @include elements(98vw, 2px);
+        background-color: $yellow-green;
+        right: 0;
+        top: 941.5px;
+        z-index: -2;
+      }
     }
 
     &--comment {
       @include paddings(66px, 0, 0, 69px);
+      background-color: white;
+
+      &::before {
+        @include elements(98vw, 2px);
+        background-color: $yellow-green;
+        right: 0;
+        top: 1243.5px;
+        z-index: -2;
+      }
     }
 
     &--checkbox-selection {
       @include paddings(60px, 50px, 0, 70px);
+      background-color: white;
+
+      &::before {
+        @include elements(98vw, 2px);
+        background-color: $yellow-green;
+        right: 0;
+        top: 1595.5px;
+        z-index: -2;
+      }
     }
   }
 
@@ -544,6 +595,12 @@ input:required:invalid ~ .form__icon {
       grid-template-columns: 569px 572px;
       grid-template-rows: auto;
       column-gap: 78px;
+      background-color: $white;
+
+      &::before {
+        top: 716px;
+        width: 98.5vw;
+      }
     }
 
     &--comment {
@@ -554,6 +611,12 @@ input:required:invalid ~ .form__icon {
       display: grid;
       grid-template-columns: 1220px;
       grid-template-rows: auto;
+      background-color: $white;
+
+      &::before {
+        top: 947px;
+        width: 98.5vw;
+      }
     }
 
     &--checkbox-selection {
@@ -561,6 +624,12 @@ input:required:invalid ~ .form__icon {
       @include paddings(61px);
       grid-column-start: 1;
       grid-column-end: -1;
+      background-color: $white;
+
+      &::before {
+        top: 1299.5px;
+        width: 98.5vw;
+      }
     }
   }
 

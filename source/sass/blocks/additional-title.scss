@@ -55,7 +55,7 @@
 
     &--accented {
       &::after {
-        @include elements(52.5px, 3px);
+        @include elements(52.5px, 2px);
         background-color: $yellow-green;
         right: 0;
         top: 12px;
@@ -66,10 +66,10 @@
       position: relative;
 
       &::after {
-        @include elements(99px, 3px);
+        @include elements(99px, 2px);
         background-color: $yellow-green;
         right: -20px;
-        top: 12px;
+        top: 13px;
       }
     }
 
@@ -77,7 +77,7 @@
       position: relative;
 
       &::after {
-        @include elements(158px, 3px);
+        @include elements(158px, 2px);
         background-color: $yellow-green;
         right: -20px;
         top: 14px;
@@ -88,7 +88,7 @@
       position: relative;
 
       &::after {
-        @include elements(136px, 3px);
+        @include elements(136px, 2px);
         background-color: $yellow-green;
         right: -20px;
         top: 14px;
@@ -145,16 +145,17 @@
 
     &--about-owner {
       position: relative;
+      background-color: $white;
 
       &::before {
-        @include elements(30px, 3px);
+        @include elements(31px, 2px);
         background-color: $yellow-green;
-        left: -68px;
+        left: -69px;
         top: 22px;
       }
 
       &::after {
-        @include elements(145px, 3px);
+        @include elements(145px, 2px);
         background-color: $yellow-green;
         right: -65px;
         top: 22px;
@@ -165,14 +166,14 @@
       position: relative;
 
       &::before {
-        @include elements(30px, 3px);
+        @include elements(31px, 2px);
         background-color: $yellow-green;
-        left: -68px;
+        left: -69px;
         top: 22px;
       }
 
       &::after {
-        @include elements(478px, 3px);
+        @include elements(478px, 2px);
         background-color: $yellow-green;
         right: 0;
         top: 22px;
@@ -183,9 +184,9 @@
       position: relative;
 
       &::before {
-        @include elements(30px, 3px);
+        @include elements(31px, 3px);
         background-color: $yellow-green;
-        left: -68px;
+        left: -71px;
         top: 22px;
       }
 
@@ -250,16 +251,17 @@
 
       &::before {
         @include elements(70px, 3px);
-        background-color: $yellow-green;
-        left: -110px;
+        background-color: $white;
+        left: -40px;
         top: 22px;
+        z-index: -1;
       }
 
       &::after {
-        @include elements(778px, 3px);
+        @include elements(778px, 2px);
         background-color: $yellow-green;
         right: -111px;
-        top: 22px;
+        top: 22.5px;
       }
     }
 
@@ -268,13 +270,14 @@
 
       &::before {
         @include elements(70px, 3px);
-        background-color: $yellow-green;
-        left: -110px;
+        background-color: $white;
+        left: -40px;
         top: 22px;
+        z-index: -1;
       }
 
       &::after {
-        @include elements(1108px, 3px);
+        @include elements(1108px, 2px);
         background-color: $yellow-green;
         right: -110px;
         top: 22px;
@@ -285,14 +288,15 @@
       position: relative;
 
       &::before {
-        @include elements(70px, 3px);
-        background-color: $yellow-green;
-        left: -110px;
+        @include elements(70px, 2px);
+        background-color: $white;
+        left: -40px;
         top: 22px;
+        z-index: -1;
       }
 
       &::after {
-        @include elements(1078px, 3px);
+        @include elements(1078px, 2px);
         background-color: $yellow-green;
         right: -113px;
         top: 22px;
